@@ -1,0 +1,49 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'sjl/badwolf'
+hook_add = '''
+set background=dark
+let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 1
+let g:badwolf_html_link_underline = 1
+let g:badwolf_css_props_highlight = 1
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'vim-jp/vim-cpp'
+on_ft = 'cpp'
+
+[[plugins]]
+repo = 'vim-jp/syntax-vim-ex''
+on_ft = 'vim'
+
+[[plugins]]
+repo = 'udalov/kotlin-vim'
+on_ft = 'kotlin'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+# TODO:とりあえず追加 要読み込み設定
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+
+# TODO:Git関連プラグインの追加

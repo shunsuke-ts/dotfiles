@@ -1,0 +1,27 @@
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+on_if = 1
+on_source = ['unite.vim', 'denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+on_if = 1
+on_event = 'TextYankPost'
+on_source = ['unite.vim', 'denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+#hook_source = 'source ~/.vim/rc/plugins/unite.rc.vim'
+hook_add = '''
+'''
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+#hook_source = '''
+#  source ~/.vim/rc/plugins/denite.rc.vim
+#'''
+
+[[plugins]]
+repo = 'lambdalisue/vim-gita'
