@@ -2,20 +2,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'sjl/badwolf'
-hook_add = '''
-set background=dark
-let g:badwolf_darkgutter = 1
-let g:badwolf_tabline = 1
-let g:badwolf_html_link_underline = 1
-let g:badwolf_css_props_highlight = 1
-'''
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
-
-
-# TODO:とりあえず追加 要読み込み設定
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -26,5 +13,3 @@ repo = 'Shougo/vimfiler.vim'
 
 [[plugins]]
 repo = 'Shougo/vimshell'
-
-# TODO:Git関連プラグインの追加

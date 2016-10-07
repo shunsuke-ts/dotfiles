@@ -32,3 +32,6 @@ call s:source_rc('old.rc.vim')
 
 filetype plugin indent on
 syntax on
+set background=dark
+colorscheme gruvbox
+

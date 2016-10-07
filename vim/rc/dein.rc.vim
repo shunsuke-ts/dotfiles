@@ -23,9 +23,10 @@ endif
 call dein#begin(s:dein_path, [expand('<sfile>')]
       \ + split(glob(s:rc_dir . '*.toml'), '\n'))
 
-call dein#load_toml(s:rc_dir . 'dein.toml',      {'lazy': 0})
-call dein#load_toml(s:rc_dir . 'dein_lang.toml', {'lazy': 0})
-call dein#load_toml(s:rc_dir . 'dein_lazy.toml', {'lazy': 1})
+call dein#load_toml(s:rc_dir . 'dein.toml',       {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_color.toml', {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_lang.toml',  {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_lazy.toml',  {'lazy': 1})
 if has('nvim')
   call dein#load_toml(s:rc_dir . 'dein_neo.toml', {})
 endif
