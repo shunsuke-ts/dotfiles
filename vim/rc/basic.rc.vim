@@ -66,13 +66,15 @@ set hidden
 set confirm
 set autoread
 set backup
+
+let $BACKUP = expand(g:config_dir . '/tmp')
 "set writebackup
 set swapfile
-if !isdirectory(expand('~/.vim/tmp'))
-  call mkdir(expand('~/.vim/tmp'), 'p')
+if !isdirectory(expand($BACKUP))
+  call mkdir(expand($BACKUP), 'p')
 endif
-set backupdir=~/.vim/tmp
-set directory=~/.vim/tmp
-set viminfo+=n~/.vim/tmp/viminfo.txt
-set undodir=~/.vim/tmp
+let &backupdir = $BACKUP
+let &directory = $BACKUP
+"let &viminfo += 'n' . $BACKUP . 'viminfo.txt'
+let &undodir = $BACKUP
 

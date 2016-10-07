@@ -27,6 +27,7 @@ endfunction
 
 call s:source_rc('dein.rc.vim')
 call s:source_rc('basic.rc.vim')
+call s:source_rc('mappings.rc.vim')
 call s:source_rc('old.rc.vim')
 
 filetype plugin indent on
