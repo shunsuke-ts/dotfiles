@@ -1,5 +1,7 @@
 set DOT=%HOME%\git.repos\dotfiles\vim
 
+mkdir %HOME%\vimfiles
+
 del      %HOME%\.vimrc
 del      %HOME%\vimfiles\filetype.vim
 rd /S /Q %HOME%\vimfiles\.vim\after
