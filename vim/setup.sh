@@ -5,7 +5,7 @@ if [ ! -e ~/.vim ]; then
   chmod 700 ~/.vim/tmp
 fi
 
-ln -sfv ~/.vimrc        ./.vimrc
-ln -sfv ~/filetype.vim  ./filetype.vim
-ln -sfv ~/.vim/after    ./after
-ln -sfv ~/.vim/rc       ./rc
+ln -sfv ./.vimrc       ~/.vimrc
+ln -sfv ./filetype.vim ~/filetype.vim  
+ln -sfv ./after        ~/.vim/after    
+ln -sfv ./rc           ~/.vim/rc       
