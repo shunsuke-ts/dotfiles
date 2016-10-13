@@ -14,8 +14,28 @@ on_cmd = 'Denite'
 #'''
 
 [[plugins]]
+repo = 'Shougo/unite-help'
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'thinca/vim-unite-history'
+on_source = 'unite.vim'
+
+[[plugins]]
 repo = 'ujihisa/unite-colorscheme'
 on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'osyo-manga/unite-filetype'
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'Shougo/unite-sudo'
+on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'ujihisa/vimshell-ssh'
+on_ft = 'vimshell'
 
 [[plugins]]
 repo = 'Shougo/neomru.vim'

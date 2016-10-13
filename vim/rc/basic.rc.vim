@@ -14,9 +14,8 @@ scriptencoding utf-8
 set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 set fileformats=unix,dos,mac
 
-set mouse=a
+set mouse=
 set clipboard& clipboard+=unnamedplus,unnamed
-set shellslash
 set visualbell t_vb=
 set noerrorbells
 
@@ -75,6 +74,6 @@ if !isdirectory(expand($BACKUP))
 endif
 let &backupdir = $BACKUP
 let &directory = $BACKUP
-"let &viminfo += 'n' . $BACKUP . 'viminfo.txt'
+let &viminfo = $BACKUP . '/' . 'viminfo.txt'
 let &undodir = $BACKUP
 

@@ -2,7 +2,8 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
+repo = 'Shougo/vimproc.vim'
+build = 'make'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -13,3 +14,9 @@ repo = 'Shougo/vimfiler.vim'
 
 [[plugins]]
 repo = 'Shougo/vimshell'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'

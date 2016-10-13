@@ -30,26 +30,6 @@ call dein#load_toml(s:rc_dir . 'dein_lazy.toml',  {'lazy': 1})
 if has('nvim')
   call dein#load_toml(s:rc_dir . 'dein_neo.toml', {})
 endif
-"call dein#load_toml('~/.vim/rc/dein_ft.toml')
-"
-"let s:vimrc_local = findfile('vimrc_local.vim', '.;')
-"if s:vimrc_local !=# ''
-"  " Load develop version plugins.
-"  call dein#local(fnamemodify(s:vimrc_local, ':h'),
-"        \ {'frozen': 1, 'merged': 0},
-"        \ ['vim*', 'unite-*', 'neco-*', '*.vim', 'denite.nvim'])
-"  if has('nvim')
-"    call dein#local(fnamemodify(s:vimrc_local, ':h'),
-"          \ {'frozen': 1, 'merged': 0},
-"          \ ['deoplete-*', '*.nvim'])
-"  endif
-"endif
-"
-"if dein#tap('deoplete.nvim') && has('nvim')
-"  call dein#disable('neocomplete.vim')
-"endif
-"call dein#disable('neobundle.vim')
-"call dein#disable('neopairs.vim')
 
 call dein#end()
 call dein#save_state()
