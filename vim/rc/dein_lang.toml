@@ -1,6 +1,18 @@
 [[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = 'css'
+
+[[plugins]]
 repo = 'vim-jp/vim-cpp'
 on_ft = 'cpp'
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'jiangmiao/simple-javascript-indenter'
+on_ft = 'javascript'
 
 [[plugins]]
 repo = 'elzr/vim-json'
@@ -9,6 +21,17 @@ on_ft = 'json'
 [[plugins]]
 repo = 'udalov/kotlin-vim'
 on_ft = 'kotlin'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+
+[[plugins]]
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = 'python'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
