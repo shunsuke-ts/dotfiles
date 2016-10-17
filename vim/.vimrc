@@ -42,7 +42,7 @@ augroup END
 let g:pyrhon3_host_prog = '/usr/bin/python3'
 if has('win32')
   let g:python3_host_prog = 'C:/Anaconda3/python'
-endif  
+endif
 let g:python3_host_skip_check = 1
 
 " Completion 

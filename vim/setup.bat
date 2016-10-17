@@ -4,7 +4,7 @@ mkdir %HOME%\vimfiles
 
 del      %HOME%\.vimrc
 del      %HOME%\vimfiles\filetype.vim
-rd /S /Q %HOME%\vimfiles\.vim\after
+rd /S /Q %HOME%\vimfiles\after
 rd /S /Q %HOME%\vimfiles\rc
 
 mklink    %HOME%\.vimrc                 %DOT%\.vimrc
