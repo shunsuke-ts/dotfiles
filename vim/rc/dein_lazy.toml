@@ -14,8 +14,23 @@ on_cmd = 'Denite'
 #'''
 
 [[plugins]]
+repo = 'Shougo/neocomplete.vim'
+depends = 'context_filetype.vim'
+if = "!has('nvim') && has('lua')"
+on_event = 'InsertEnter'
+hook_source = '''
+  call Source_rc('plugins/neocomplete.rc.vim')
+'''
+
+[[plugins]]
 repo = 'Shougo/unite-help'
 on_source = 'unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+on_source = '''
+  let g:vimfiler_as_default_explorer = 1
+'''
 
 [[plugins]]
 repo = 'thinca/vim-unite-history'
@@ -38,6 +53,10 @@ repo = 'ujihisa/vimshell-ssh'
 on_ft = 'vimshell'
 
 [[plugins]]
+repo = 'Shougo/neossh.vim'
+on_ft = ['vimfiler', 'vimshell']
+
+[[plugins]]
 repo = 'Shougo/neomru.vim'
 on_if = 1
 on_source = ['unite.vim', 'denite.nvim']
@@ -47,6 +66,11 @@ repo = 'Shougo/neoyank.vim'
 on_if = 1
 on_event = 'TextYankPost'
 on_source = ['unite.vim', 'denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/echodoc.vim'
+on_event = 'CompleteDone'
+hook_source = 'call echodoc#enable()'
 
 [[plugins]]
 repo = 'lambdalisue/vim-gita'

@@ -9,14 +9,19 @@ build = 'make'
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
 
 [[plugins]]
 repo = 'Shougo/vimshell'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'kana/vim-textobj-user'
+
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
