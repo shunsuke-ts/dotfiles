@@ -3,6 +3,8 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.bashrc setlocal filetype=bash
   autocmd BufNewFile,BufRead *.c,*.h setlocal filetype=c
   autocmd BufNewFile,BufRead *.cpp,*.hpp setlocal filetype=cpp
+  autocmd BufNewFile,BufRead *.cs setlocal filetype=cs
+  autocmd BufNewFile,BufRead *.css setlocal filetype=css
   autocmd BufNewFile,BufRead *.go setlocal filetype=go
   autocmd BufNewFile,BufRead *.ino setlocal filetype=arduino
   autocmd BufNewFile,BufRead *.java setlocal filetype=java
@@ -19,16 +21,10 @@ augroup END
 
 augroup setomnifunc
   autocmd!
-  autocmd FileType c setlocal omnifunc=ccomplete#CompleteCPP
-  autocmd FileType cpp setlocal omnifunc=cppcomplete#CompleteCPP
+  autocmd FileType c setlocal omnifunc=ClangComplete
+  autocmd FileType cpp setlocal omnifunc=ClangComplete
   autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType go setlocal omnifunc=gocomplete#Complete
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomFiletype
-  autocmd FileTYpe java setlocal omnifunc=javacomplete#Completeplete
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType go setlocal omnifunc=go#complete#Complete
+  autocmd FileType python setlocal omnifunc=jedi#completions
 augroup END

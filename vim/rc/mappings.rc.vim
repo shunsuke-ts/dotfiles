@@ -1,3 +1,5 @@
+let mapleader = ","
+
 nnoremap ZQ <Nop>
 nnoremap ZZ <Nop>
 

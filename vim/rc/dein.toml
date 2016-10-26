@@ -4,11 +4,11 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
-
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-
+hook_add = '''
+  if g:is_win
+    let g:vimproc#download_windows_dll = 1
+  endif
+'''
 
 [[plugins]]
 repo = 'Shougo/vimshell'
@@ -21,7 +21,6 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'kana/vim-textobj-user'
-
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'

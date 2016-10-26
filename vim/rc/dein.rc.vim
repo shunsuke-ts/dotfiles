@@ -25,8 +25,8 @@ call dein#begin(s:dein_path, [expand('<sfile>')]
 
 call dein#load_toml(s:rc_dir . 'dein.toml',       {'lazy': 0})
 call dein#load_toml(s:rc_dir . 'dein_color.toml', {'lazy': 0})
-call dein#load_toml(s:rc_dir . 'dein_lang.toml',  {'lazy': 0})
 call dein#load_toml(s:rc_dir . 'dein_lazy.toml',  {'lazy': 1})
+call dein#load_toml(s:rc_dir . 'dein_lang.toml')
 if has('nvim')
   call dein#load_toml(s:rc_dir . 'dein_neo.toml', {})
 endif
@@ -34,9 +34,7 @@ endif
 call dein#end()
 call dein#save_state()
 
-if !has('vim_starting') && dein#check_install()
+if dein#check_install()
   " Installation check.
   call dein#install()
 endif
-
-command! DeinUpdate call dein#update()
