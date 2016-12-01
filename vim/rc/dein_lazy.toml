@@ -1,13 +1,6 @@
 [[plugins]]
 repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
-hook_add = '''
-'''
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-if = "has('nvim')"
-on_cmd = 'Denite'
 
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
@@ -16,35 +9,19 @@ if = "!has('nvim') && has('lua')"
 on_event = 'InsertEnter'
 hook_source = "call Source_rc('plugins/neocomplete.rc.vim')"
 
-[[plugins]]
-repo = 'Shougo/unite-help'
-on_source = 'unite.vim'
+[[plugins]]                                                
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+hook_source = "call Source_rc('plugins/neosnippet.rc.vim')"
+
 
 [[plugins]]
 repo = 'Shougo/vimfiler.vim'
 on_source = '''
   let g:vimfiler_as_default_explorer = 1
 '''
-
-[[plugins]]
-repo = 'Shougo/unite-outline'
-on_source = 'unite.vim'
-
-[[plugins]]
-repo = 'thinca/vim-unite-history'
-on_source = 'unite.vim'
-
-[[plugins]]
-repo = 'ujihisa/unite-colorscheme'
-on_source = 'unite.vim'
-
-[[plugins]]
-repo = 'osyo-manga/unite-filetype'
-on_source = 'unite.vim'
-
-[[plugins]]
-repo = 'Shougo/unite-sudo'
-on_source = 'unite.vim'
 
 [[plugins]]
 repo = 'ujihisa/vimshell-ssh'
@@ -73,6 +50,18 @@ on_source = ['unite.vim', 'denite.nvim']
 repo = 'Shougo/echodoc.vim'
 on_event = 'CompleteDone'
 hook_source = 'call echodoc#enable()'
+
+[[plugins]]
+repo = 'neomake/neomake'
+hook_source = "call Source_rc('plugins/neomake.rc.vim')"
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+on_cmd = 'TagbarToggle'
+hook_add = 'nnoremap <F8> :TagbarToggle<CR>'
 
 [[plugins]]
 repo = 'lambdalisue/vim-gita'

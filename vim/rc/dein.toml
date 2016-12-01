@@ -11,6 +11,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'Shougo/vimshell'
 
 [[plugins]]

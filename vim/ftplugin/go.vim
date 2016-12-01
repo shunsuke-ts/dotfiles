@@ -11,8 +11,12 @@ setlocal softtabstop=4
 setlocal shiftwidth=4
 setlocal foldmethod=marker
 " setlocal commentstring=
-
-setlocal rtp+=$GOPATH/src/github.com/nsf/gocode/vim
+"
+if g:is_nvim
+  setlocal rtp+=$GOPATH/src/github.com/nsf/gocode/nvim
+else
+  setlocal rtp+=$GOPATH/src/github.com/nsf/gocode/vim
+endif
 setlocal rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 let b:did_load_ftplugin_go = 1

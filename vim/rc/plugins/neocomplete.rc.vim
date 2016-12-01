@@ -37,10 +37,14 @@ let g:neocomplete#force_omni_input_patterns.cpp =
       \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 let g:neocomplete#force_omni_input_patterns.cs = 
       \ '.*[^=\);]'
-let g:neocomplete#sources#omni#input_patterns.go =
-      \ '\h\w\.\w*'
+let g:neocomplete#force_omni_input_patterns.go =
+      \ '\(\h\|\h\w\)\.\w*'
+ let g:neocomplete#force_omni_input_patterns.javascript =
+      \ '[^. \t]\.\%(\h\w*\)\?'
 let g:neocomplete#force_omni_input_patterns.python = 
       \ '\h\w*\|[^. \t]\.\w*'
+let g:neocomplete#force_omni_input_patterns.tex = 
+      \ '\(\\cite{\)\|\(\\ref{\)'
 
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}
@@ -63,6 +67,10 @@ let g:neocomplete#sources#vim#complete_functions = {
       \ 'Vinarise': 'vinarise#complete',
       \}
 
+let g:neocomplete#sources#omni#functions.javascript = [
+      \   'jspc#omni',
+      \   'tern#Complete',
+      \ ]
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()

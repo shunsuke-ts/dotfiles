@@ -9,4 +9,8 @@ let g:go_dispatch_enabled = 1
 let g:go_doc_command = "godoc"
 let g:go_fmt_command = "goimports"
 
+augroup vimgo
+  autocmd!
+augroup END
+
 let g:go_disable_autoinstall = 1

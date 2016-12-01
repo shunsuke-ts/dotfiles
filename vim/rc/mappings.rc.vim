@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = "<Space>"
 
 nnoremap ZQ <Nop>
 nnoremap ZZ <Nop>
@@ -9,6 +9,10 @@ nnoremap <Space>j +
 nnoremap <space>k -
 nnoremap <space>h ^
 nnoremap <Space>l $
+nnoremap <Space>wj <C-w>j
+nnoremap <Space>wk <C-w>k
+nnoremap <Space>wh <C-w>h
+nnoremap <Space>wl <C-w>l
 noremap! <C-j> <Down>
 noremap! <C-k> <Up>
 noremap! <C-h> <Left>
