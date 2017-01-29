@@ -45,5 +45,6 @@ call Source_rc('dein.rc.vim')
 call Source_rc('basic.rc.vim')
 call Source_rc('indent.rc.vim')
 call Source_rc('mappings.rc.vim')
+call Source_rc('encoding.rc.vim')
 
 filetype plugin indent on

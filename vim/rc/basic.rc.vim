@@ -9,11 +9,6 @@ if has('nvim')
   let g:configdir = '~/.config/nvim'
 endif
 
-set encoding=utf-8
-scriptencoding utf-8
-set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
-set fileformats=unix,dos,mac
-
 set mouse=
 set clipboard& clipboard+=unnamedplus,unnamed
 set visualbell t_vb=

@@ -10,6 +10,7 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.java setlocal filetype=java
   autocmd BufNewFile,BufRead *.js setlocal filetype=javascript
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+  autocmd BufNewFile,BufRead *.pu setlocal filetype=plantuml
   autocmd BufNewFile,BufRead *.py setlocal filetype=python
   autocmd BufNewFile,BufRead *.r setlocal filetype=r
   autocmd BufNewFile,BufRead *.rb setlocal filetype=ruby

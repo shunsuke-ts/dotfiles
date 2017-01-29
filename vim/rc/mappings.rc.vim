@@ -13,10 +13,6 @@ nnoremap <Space>wj <C-w>j
 nnoremap <Space>wk <C-w>k
 nnoremap <Space>wh <C-w>h
 nnoremap <Space>wl <C-w>l
-noremap! <C-j> <Down>
-noremap! <C-k> <Up>
-noremap! <C-h> <Left>
-noremap! <C-l> <Right>
 
 nnoremap n nzz
 nnoremap N Nzz
@@ -34,5 +30,5 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 cnoremap <expr> ? getcmdtype() == '?' ? '\?' : '?'
 
 " increment and decrement
-nnoremap + <C-a>
-nnoremap - <C-x>
+nnoremap <Space>a <C-a>
+nnoremap <Space>x <C-x>
