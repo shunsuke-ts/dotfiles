@@ -11,7 +11,7 @@ let s:dein_dir = s:dein_path . '/repos/github.com/Shougo/dein.vim'
 let s:rc_dir = g:config_dir . '/rc/'
 
 if !isdirectory(s:dein_dir)
-  call system('git clone https://github.com/Shougo/dein.vim '
+  call system('git clone http://github.com/Shougo/dein.vim '
         \ . s:dein_dir)
 endif
 execute 'set runtimepath+=' . s:dein_dir
