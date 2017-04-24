@@ -5,7 +5,6 @@ if has('kaoriya')
   set background=dark
   colorscheme gruvbox
   set guifont=Myrica_M:h12
-  set guifontwide=Myrica_M:h12
   set lines=35
   set columns=85
 endif
