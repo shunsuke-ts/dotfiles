@@ -64,5 +64,5 @@ on_cmd = 'TagbarToggle'
 hook_add = 'nnoremap <F8> :TagbarToggle<CR>'
 
 [[plugins]]
-repo = 'lambdalisue/vim-gita'
-on_cmd = 'Gita'
+repo = 'lambdalisue/gina.vim'
+on_cmd = 'Gina'
