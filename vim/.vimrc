@@ -18,7 +18,7 @@ if has('vim_starting')
   if has('nvim')
      let g:is_nvim = 1
   endif
-
+  
   let $CACHE = expand('~/.cache')
 endif
 
