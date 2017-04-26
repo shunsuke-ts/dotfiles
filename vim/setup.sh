@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT='git.repos/dotfiles/vim'
+DOT='Git/dotfiles/vim'
 
 if [ ! -e ~/.vim ]; then
   mkdir ~/.vim

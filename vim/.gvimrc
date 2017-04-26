@@ -4,7 +4,7 @@ if has('kaoriya')
   source $VIMRUNTIME/menu.vim
   set background=dark
   colorscheme gruvbox
-  set guifont=Myrica_M:h12
+  set guifont=Myrica_M:h12:cSHIFTJIS:qDRAFT
   set lines=35
   set columns=85
 endif
