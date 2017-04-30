@@ -1,9 +1,8 @@
 if has('vim_starting')
   if has('win32')
-    set runtimepath+=~/.vim,~/.vim/autoload
+    let g:configdir = '~/.vimfiles'
   endif
 endif
-
 let g:configdir = '~/.vim'
 if has('nvim')
   let g:configdir = '~/.config/nvim'
