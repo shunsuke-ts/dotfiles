@@ -1,3 +1,5 @@
+# vim plugin
+
 [[plugins]]
 repo = 'Shougo/dein.vim'
 

@@ -18,8 +18,8 @@ if has('vim_starting')
   if has('nvim')
      let g:is_nvim = 1
   endif
-  
   let $CACHE = expand('~/.cache')
+
 endif
 
 function! Source(path) abort
@@ -27,10 +27,6 @@ function! Source(path) abort
   if filereadable(s_path)
     execute 'source ' . s_path
   endif
-endfunction
-
-function! Source_rc(path) abort
-  call Source('rc/' . a:path)
 endfunction
 
 augroup vimrc_autoreload
@@ -41,10 +37,11 @@ augroup END
 " Completion 
 set completeopt=menuone
 
-call Source_rc('dein.rc.vim')
-call Source_rc('basic.rc.vim')
-call Source_rc('indent.rc.vim')
-call Source_rc('mappings.rc.vim')
-call Source_rc('encoding.rc.vim')
+call Source('rc/system.rc.vim')
+call Source('rc/dein.rc.vim')
+call Source('rc/basic.rc.vim')
+call Source('rc/indent.rc.vim')
+call Source('rc/mappings.rc.vim')
+call Source('rc/encoding.rc.vim')
 
 filetype plugin indent on

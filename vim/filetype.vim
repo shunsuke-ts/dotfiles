@@ -24,7 +24,7 @@ augroup setomnifunc
   autocmd!
   autocmd FileType c setlocal omnifunc=ClangComplete
   autocmd FileType cpp setlocal omnifunc=ClangComplete
-  autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+  "autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType go setlocal omnifunc=go#complete#Complete
   autocmd FileType python setlocal omnifunc=jedi#completions

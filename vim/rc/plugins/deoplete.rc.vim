@@ -1,9 +1,6 @@
 " deoplete-jedi
 let g:deoplete#sources#jedi#enable_cache = 1
 let g:deoplete#sources#jedi#python_path = '/usr/bin/python3'
-if has('win32')
-  let g:deoplete#sources#jedi#python_path = 'C:/Anaconda3/python'
-endif
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1

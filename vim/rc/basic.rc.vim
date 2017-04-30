@@ -1,13 +1,3 @@
-if has('vim_starting')
-  if has('win32')
-    let g:configdir = '~/.vimfiles'
-  endif
-endif
-let g:configdir = '~/.vim'
-if has('nvim')
-  let g:configdir = '~/.config/nvim'
-endif
-
 set mouse=
 set clipboard& clipboard+=unnamedplus,unnamed
 set visualbell t_vb=
@@ -70,4 +60,3 @@ let &backupdir = $BACKUP
 let &directory = $BACKUP
 let &viminfo = $BACKUP . '/' . 'viminfo.txt'
 let &undodir = $BACKUP
-

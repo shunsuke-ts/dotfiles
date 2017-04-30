@@ -1,3 +1,5 @@
+# vim color scheme
+
 [[plugins]]
 repo = 'sjl/badwolf'
 hook_add = '''

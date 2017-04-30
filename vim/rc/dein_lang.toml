@@ -1,98 +1,189 @@
-#[[plugins]]
-#repo = 'OmniSharp/omnisharp-vim'
-#on_ft = 'cs'
-#build = 'xbuild server/OmniSharp.sln'
-#hook_source = "call Source_rc('plugins/omnisharp-vim.rc.vim')"
+# Supported Environments
 
-[[plugins]]
-repo = 'OrangeT/vim-csharp'
-on_ft = 'cs'
+# Languages
+# C/C++ XXX
+# C# XXX
+# Golang
+# HTML/CSS
+# JVM(Kotlin/Scala)
+# Javascript
+# Python
+# TeX
 
+# Config
+# JSON
+# Markdown
+# PlantUML
+# TOML
+# Vim
+# YAML
+
+# System
+#{{{
 [[plugins]]
+# Vim script for text filtering and alignment
+repo = 'majutsushi/tagbar'
+if = "executable('ctags')"
+lazy = 1
+on_cmd = 'TagbarToggle'
+hook_add = 'nnoremap <F8> :TagbarToggle<CR>'
+#}}}
+
+# C/C++
+#{{{
+[[plugins]]
+# Clang completion plugin for vim
 repo = 'justmao945/vim-clang'
+if = "executable('clang')"
+lazy = 1
 on_ft = ['c', 'cpp']
-hook_source = "call Source_rc('plugins/vim-clang.rc.vim')"
-
+hook_source = "call Source('rc/plugins/vim-clang.rc.vim')"
 [[plugins]]
+# c or cpp syntax files
 repo = 'vim-jp/vim-cpp'
 on_ft = ['c', 'cpp']
-
+#}}}
+# C#
+#{{{
+[[plugins]]
+# Vim omnicompletion (intellisense) and more for c#
+repo = 'OmniSharp/omnisharp-vim'
+if = 0
+lazy = 1
+on_ft = ['cs']
+build = 'xbuild server/OmniSharp.sln'
+hook_source = "call Source('rc/plugins/omnisharp-vim.rc.vim')"
+[[plugins]]
+# Enhancement's to Vim's C-Sharp Functionality
+repo = 'OrangeT/vim-csharp'
+on_ft = ['cs']
+#}}}
+# Golang
+#{{{
 [[plugins]]
 repo = 'fatih/vim-go'
+lazy = 1
 on_ft = ['go']
-hook_source = "call Source_rc('plugins/vim-go.rc.vim')"
-
+hook_source = "call Source('rc/plugins/vim-go.rc.vim')"
+#}}}
+# HTML/CSS
+#{{{
 [[plugins]]
 repo = 'othree/html5.vim'
 on_ft = ['html']
-
 [[plugins]]
 repo = 'mattn/emmet-vim'
 on_ft = ['html', 'css']
-
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 on_ft = ['html', 'css']
-
 [[plugins]]
 repo = 'gko/vim-coloresque'
 on_ft = ['html', 'css']
-
+#}}}
+# JVM
+#{{{
+[[plugins]]
+# Kotlin plugin for Vim. Featuring: syntax highlighting, basic indentation, Syntastic support
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
+[[plugins]]
+# My work on integration of Scala into Vim - not a ton here, but useful for me.
+repo = 'derekwyatt/vim-scala'
+on_ft = ['scala']
+#}}}
+# Javascript
+#{{{
 [[plugins]]
 repo = 'othree/yajs.vim'
 on_ft = ['html', 'javascript']
-
 [[plugins]]
 repo = 'othree/es.next.syntax.vim'
 on_ft = ['html', 'javascript']
 depends = 'yajs.vim'
-
 [[plugins]]
 repo = 'jiangmiao/simple-javascript-indenter'
 on_ft = ['html', 'javascript']
-
+#}}}
+# Python
+#{{{
 [[plugins]]
-repo = 'elzr/vim-json'
-on_ft = ['json']
-
+# Using the jedi autocompletion library for VIM.
+repo = 'davidhalter/jedi-vim'
+lazy = 1
+on_ft = ['python']
+hook_source = "call Source('rc/plugins/jedi-vim.rc.vim')"
 [[plugins]]
-repo = 'udalov/kotlin-vim'
-on_ft = ['kotlin']
-
+# Flake8 plugin for Vim
+repo = 'nvie/vim-flake8'
+lazy = 1
+on_ft = ['python']
+#hook_source = "call Source('rc/plugins/vim-flake8.rc.vim')"
 [[plugins]]
-repo = 'vim-ruby/vim-ruby'
-on_ft = ['ruby']
-
+# A nicer Python indentation style for vim.
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = ['python']
 [[plugins]]
+# Text objects for Python.
+repo = 'bps/vim-textobj-python'
+on_ft = ['python']
+#}}}
+# TeX
+#{{{
+[[plugins]]
+# A modern vim plugin for editing LaTeX files.
 repo = 'lervag/vimtex'
 on_ft = ['tex']
-hook_source = "call Source_rc('plugins/vimtex.rc.vim')"
+hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
+#}}}
 
+
+# JSON
+#{{{
 [[plugins]]
+# jdaddy.vim: JSON manipulation and pretty printing
+repo = 'tpope/vim-jdaddy'
+on_ft = ['json']
+[[plugins]]
+# Syntax highlighting for JSON in Vim
+repo = 'elzr/vim-json'
+on_ft = ['json']
+#}}}
+# Markdown
+#{{{
+[[plugins]]
+# Markdown Vim Mode
 repo = 'rcmdnk/vim-markdown'
-
+on_ft = ['markdown']
+depends = 'tabular'
+#}}}
+# PlantUML
+#{{{
 [[plugins]]
 repo = 'aklt/plantuml-syntax'
-on_ft = 'plantuml'
+on_ft = ['plantuml']
 hook_source = '''
   let g:plantuml_executable_script = "plantuml"
 '''
-
+#}}}
+# TOML
+#{{{
 [[plugins]]
-repo = 'hynek/vim-python-pep8-indent'
-on_ft = 'python'
-
-[[plugins]]
-repo = 'davidhalter/jedi-vim'
-lazy = 1
-on_ft = 'python'
-hook_source = "call Source_rc('plugins/jedi-vim.rc.vim')"
-
-
-[[plugins]]
+# Vim syntax for TOML
 repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
+on_ft = ['toml']
+#}}}
+# Vim
+#{{{
 [[plugins]]
+# An excellent Vim's syntax highlighting file for Vim script
 repo = 'vim-jp/syntax-vim-ex''
-on_ft = 'vim'
+on_ft = ['vim']
+#}}}
+# YAML
+#{{{
+[[plugins]]
+# YAML Highlight script for VIM editor
+repo = 'stephpy/vim-yaml'
+on_ft = ['yaml']
+#}}}

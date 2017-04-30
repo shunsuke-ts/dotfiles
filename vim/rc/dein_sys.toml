@@ -1,0 +1,5 @@
+[[plugins]]
+# A CtrlP matcher, specialized for paths.
+repo = 'nixprime/cpsm'
+hook_source = "call Source('rc/plugins/ctrlp.rc.vim')"
+build = "./install.sh"

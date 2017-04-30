@@ -7,14 +7,14 @@ repo = 'Shougo/neocomplete.vim'
 depends = 'context_filetype.vim'
 if = "!has('nvim') && has('lua')"
 on_event = 'InsertEnter'
-hook_source = "call Source_rc('plugins/neocomplete.rc.vim')"
+hook_source = "call Source('rc/plugins/neocomplete.rc.vim')"
 
-[[plugins]]                                                
+[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets', 'context_filetype.vim']
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
-hook_source = "call Source_rc('plugins/neosnippet.rc.vim')"
+hook_source = "call Source('rc/plugins/neosnippet.rc.vim')"
 
 
 [[plugins]]
@@ -53,15 +53,11 @@ hook_source = 'call echodoc#enable()'
 
 [[plugins]]
 repo = 'neomake/neomake'
-hook_source = "call Source_rc('plugins/neomake.rc.vim')"
+hook_source = "call Source('rc/plugins/neomake.rc.vim')"
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
 
-[[plugins]]
-repo = 'majutsushi/tagbar'
-on_cmd = 'TagbarToggle'
-hook_add = 'nnoremap <F8> :TagbarToggle<CR>'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
