@@ -3,10 +3,10 @@
 # Languages
 # C/C++ XXX
 # C# XXX
-# Golang
+# Golang OK
 # HTML/CSS
 # JVM(Kotlin/Scala)
-# Javascript
+# Javascript(ES6)
 # Python
 # TeX
 
@@ -155,7 +155,7 @@ on_ft = ['json']
 # Markdown Vim Mode
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
-depends = 'tabular'
+depends = 'tagbar'
 #}}}
 # PlantUML
 #{{{

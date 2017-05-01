@@ -28,7 +28,7 @@ call dein#load_toml(s:rc_dir . 'dein_sys.toml', {'lazy': 0})
 call dein#load_toml(s:rc_dir . 'dein_color.toml', {'lazy': 0})
 call dein#load_toml(s:rc_dir . 'dein_lazy.toml',  {'lazy': 1})
 call dein#load_toml(s:rc_dir . 'dein_unite.toml',  {'lazy': 1})
-call dein#load_toml(s:rc_dir . 'dein_lang.toml')
+call dein#load_toml(s:rc_dir . 'dein_env.toml')
 if has('nvim')
   call dein#load_toml(s:rc_dir . 'dein_neo.toml', {})
 endif
