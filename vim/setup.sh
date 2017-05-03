@@ -3,9 +3,12 @@
 DOT='Git/dotfiles/vim'
 
 if [ ! -e ~/.vim ]; then
-  mkdir ~/.vim
-  mkdir ~/.vim/tmp
+  mkdir -p ~/.vim/tmp
   chmod 700 ~/.vim/tmp
+fi
+
+if [ ! -e ~/.config/nvim ]; then
+  mkdir -p ~/.config/nvim
 fi
 
 # Vim
