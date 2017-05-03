@@ -11,6 +11,7 @@
 # TeX
 
 # Config
+# Dockerfile
 # JSON
 # Markdown
 # PlantUML
@@ -138,6 +139,13 @@ hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
 #}}}
 
 
+# Dockerfile
+#{{{
+[[plugins]]
+# Vim syntax file & snippets for Docker's Dockerfile
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['docker']
+#}}}
 # JSON
 #{{{
 [[plugins]]
