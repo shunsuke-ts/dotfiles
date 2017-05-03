@@ -16,7 +16,8 @@ if has('vim_starting')
 
   let g:is_nvim = 0
   if has('nvim')
-     let g:is_nvim = 1
+    let g:is_nvim = 1
+    let g:config_dir = expand('~/.config/nvim')
   endif
   let $CACHE = expand('~/.cache')
 
