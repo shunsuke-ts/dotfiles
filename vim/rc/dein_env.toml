@@ -185,7 +185,7 @@ on_ft = ['toml']
 #{{{
 [[plugins]]
 # An excellent Vim's syntax highlighting file for Vim script
-repo = 'vim-jp/syntax-vim-ex''
+repo = 'vim-jp/syntax-vim-ex'
 on_ft = ['vim']
 #}}}
 # YAML
