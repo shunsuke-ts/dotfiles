@@ -13,6 +13,7 @@ mklink    %HOME%\.gvimrc                %DOT%\.gvimrc
 mklink    %HOME%\vimfiles\filetype.vim  %DOT%\filetype.vim
 mklink /D %HOME%\vimfiles\ftplugin      %DOT%\ftplugin
 mklink /D %HOME%\vimfiles\rc            %DOT%\rc
+mklink /D %HOME%\vimfiles\syntax        %DOT%\syntax
 
 set /P WAIT="Press Enter to Exit."
 

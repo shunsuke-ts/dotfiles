@@ -5,6 +5,7 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.cpp,*.hpp setlocal filetype=cpp
   autocmd BufNewFile,BufRead *.cs setlocal filetype=cs
   autocmd BufNewFile,BufRead *.css setlocal filetype=css
+  autocmd BufNewFile,BufRead *.flex,*.jflex setlocal filetype=jflex
   autocmd BufNewFile,BufRead *.go setlocal filetype=go
   autocmd BufNewFile,BufRead *.ino setlocal filetype=arduino
   autocmd BufNewFile,BufRead *.java setlocal filetype=java

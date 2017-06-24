@@ -19,6 +19,7 @@ ln -sfvn ~/$DOT/rc           ~/.vim/rc
 # Neovim
 ln -sfv  ~/$DOT/init.vim     ~/.config/nvim/init.vim
 ln -sfv  ~/.vim/filetype.vim ~/.config/nvim/filetype.vim
-ln -sfvn ~/.vim/tmp          ~/.config/nvim/tmp
 ln -sfvn ~/.vim/ftplugin     ~/.config/nvim/ftplugin
 ln -sfvn ~/.vim/rc           ~/.config/nvim/rc
+ln -sfvn ~/.vim/syntax       ~/.config/nvim/syntax
+ln -sfvn ~/.vim/tmp          ~/.config/nvim/tmp
