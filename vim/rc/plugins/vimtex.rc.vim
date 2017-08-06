@@ -10,7 +10,7 @@ let g:vimtex_latexmk_options = '-pdfdvi'
 
 if g:is_win
   let g:vimtex_view_general_viewer = 'SumatraPDF'
-elseif g:is_linux
+elseif g:is_unix
   let g:vimtex_view_general_viewer = 'evince'
 endif
 
