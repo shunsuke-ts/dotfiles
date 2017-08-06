@@ -20,23 +20,23 @@ if !dein#load_state(s:dein_path)
   finish
 endif
 
-call dein#begin(s:dein_path, [expand('<sfile>')]
-      \ + split(glob(s:rc_dir . '*.toml'), '\n'))
+" call dein#begin(s:dein_path, [expand('<sfile>')]
+"       \ + split(glob(s:rc_dir . '*.toml'), '\n')" )
+call dein#begin(s:dein_path, expand('<sfile>'))
 
-call dein#load_toml(s:rc_dir . 'dein.toml',       {'lazy': 0})
-call dein#load_toml(s:rc_dir . 'dein_sys.toml', {'lazy': 0})
-call dein#load_toml(s:rc_dir . 'dein_color.toml', {'lazy': 0})
-call dein#load_toml(s:rc_dir . 'dein_lazy.toml',  {'lazy': 1})
+call dein#load_toml(s:rc_dir . 'dein.toml',        {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_neo.toml',    {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_sys.toml',    {'lazy': 1})
+call dein#load_toml(s:rc_dir . 'dein_env.toml',    {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_edit.toml',   {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_color.toml',  {'lazy': 0})
+call dein#load_toml(s:rc_dir . 'dein_lazy.toml',   {'lazy': 1})
 call dein#load_toml(s:rc_dir . 'dein_unite.toml',  {'lazy': 1})
-call dein#load_toml(s:rc_dir . 'dein_env.toml')
-if has('nvim')
-  call dein#load_toml(s:rc_dir . 'dein_neo.toml', {})
-endif
 
 call dein#end()
 call dein#save_state()
 
-if dein#check_install()
+if !has('vim_starting') && dein#check_install()
   " Installation check.
   call dein#install()
 endif

@@ -1,6 +1,7 @@
 # vim plugin
 
 [[plugins]]
+# ⚡️ Dark powered Vim/Neovim plugin manager
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
@@ -18,8 +19,6 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/vimshell'
 
-[[plugins]]
-repo = 'Shougo/context_filetype.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'

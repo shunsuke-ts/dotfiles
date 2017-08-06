@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
 repo = 'Shougo/unite-help'
 on_source = 'unite.vim'
 

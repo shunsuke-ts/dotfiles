@@ -1,22 +1,45 @@
+# deoplete.nvim {{{
 [[plugins]]
+# 🌠 Dark powered asynchronous completion framework for neovim
 repo = 'Shougo/deoplete.nvim'
 depends = 'context_filetype.vim'
-if = "has('nvim')"
+if = 'g:is_nvim'
 on_i = 1
-hook_source = '''
-  let g:deoplete#enable_at_startup = 1
-  source ~/.vim/rc/plugins/deoplete.rc.vim
-'''
+lazy = 1
+on_event = 'InsertEnter'
+hook_add = "let g:deoplete#enable_at_startup = 1"
+hook_source = "call Source('rc/plugins/deoplete.nvim.rc.nvim')"
 
 [[plugins]]
 repo = 'zchee/deoplete-clang'
+depends = 'deoplete.nvim'
 on_ft = ['c', 'cpp']
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
+depends = 'deoplete.nvim'
 on_ft = 'python'
 
 [[plugins]]
 repo = 'zchee/deoplete-go'
+depends = 'deoplete.nvim'
 on_i = 1
 on_ft = 'go'
+# }}}
+
+# denite.nvim {{{
+[[plugins]]
+# 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+if = 'g:is_nvim || g:is_vim8'
+lazy = 1
+hook_source = "call Source('rc/plugins/denite.nvim.rc.vim')"
+
+[[plugins]]
+# 📁 The dark powered file explorer implementation using denite.nvim
+repo = 'Shougo/defx.nvim'
+depends = 'denite.nvim'
+on_source = 'denite.nvim'
+if = 0
+# }}}

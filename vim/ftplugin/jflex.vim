@@ -2,7 +2,7 @@ if exists('b:did_ftplugin_jflex')
   finish
 endif
 
-source g:config_dir . '/syntax/jflex.vim'
+execute 'source ' . g:config_dir . '/syntax/jflex.vim'
 
 setlocal autoindent
 setlocal smartindent

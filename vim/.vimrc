@@ -3,10 +3,15 @@ if has('vim_starting')
   let g:is_win = 0
   let g:is_mac = 0
   let g:is_unix = 0
+  let g:is_vim8 = 0
 
+  if v:version >= 800
+    let g:is_vim8 = 1
+  endif
   if has('win32') || has('win64')
     let g:is_win = 1
     let g:config_dir = expand('~/vimfiles')
+    let $PATH = $PATH . ';C:\Program Files\Python35;C:\Program Files\Python35\Scripts'
     set shellslash
   elseif has('mac')
     let g:is_mac = 1
@@ -15,10 +20,6 @@ if has('vim_starting')
   endif
 
   let g:is_nvim = 0
-  if has('nvim')
-    let g:is_nvim = 1
-    let g:config_dir = expand('~/.config/nvim')
-  endif
   let $CACHE = expand('~/.cache')
 
 endif

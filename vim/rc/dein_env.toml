@@ -10,7 +10,7 @@
 # Python
 # TeX
 
-# Config
+# Cypher
 # Dockerfile
 # JSON
 # Markdown
@@ -18,17 +18,6 @@
 # TOML
 # Vim
 # YAML
-
-# System
-#{{{
-[[plugins]]
-# Vim script for text filtering and alignment
-repo = 'majutsushi/tagbar'
-if = "executable('ctags')"
-lazy = 1
-on_cmd = 'TagbarToggle'
-hook_add = 'nnoremap <F8> :TagbarToggle<CR>'
-#}}}
 
 # C/C++
 #{{{
@@ -139,6 +128,13 @@ hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
 #}}}
 
 
+# Cypher
+#{{{
+[[plugins]]
+# Very basic Vim syntax for Cypher
+repo = 'neo4j-contrib/cypher-vim-syntax'
+on_ft = ['cypher']
+#}}}
 # Dockerfile
 #{{{
 [[plugins]]
@@ -156,14 +152,17 @@ on_ft = ['json']
 # Syntax highlighting for JSON in Vim
 repo = 'elzr/vim-json'
 on_ft = ['json']
+[[plugins]]
+repo = '5t111111/neat-json.vim'
+if = "has('python')"
+on_ft = ['json']
 #}}}
 # Markdown
 #{{{
 [[plugins]]
-# Markdown Vim Mode
-repo = 'rcmdnk/vim-markdown'
+#Realtime preview by Vim. (Markdown, reStructuredText, textile)
+repo = 'kannokanno/previm'
 on_ft = ['markdown']
-depends = 'tagbar'
 #}}}
 # PlantUML
 #{{{

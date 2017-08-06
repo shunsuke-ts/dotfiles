@@ -1,0 +1,8 @@
+[[plugins]]
+# An extensible & universal comment vim-plugin that also handles embedded filetypes http://www.vim.org/scripts/script.php…
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+# surround.vim: quoting/parenthesizing made simple http://www.vim.org/scripts/script.php…
+repo = 'tpope/vim-surround'
+
