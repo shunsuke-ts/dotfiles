@@ -1,7 +1,7 @@
 source ~/.vimrc
 
-"let g:python_host_prog = expand('')
-"let g:python3_host_prog = expand('')
+let g:python_host_prog = expand('/usr/bin/python2.7')
+let g:python3_host_prog = expand('/usr/bin/python3.5')
 let g:is_nvim = 1
 let g:config_dir = expand('~/.config/nvim')
 if g:is_win
