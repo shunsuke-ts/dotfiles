@@ -8,13 +8,9 @@
 # Python
 # TeX
 
-# Cypher
-# Dockerfile
 # JSON
 # Markdown
 # PlantUML
-# TOML
-# Vim
 # YAML
 
 # C/C++
@@ -35,6 +31,7 @@ if = 0
 on_ft = ['cs']
 build = 'xbuild server/OmniSharp.sln'
 hook_source = "call Source('rc/plugins/omnisharp-vim.rc.vim')"
+
 [[plugins]]
 # Enhancement's to Vim's C-Sharp Functionality
 repo = 'OrangeT/vim-csharp'
@@ -44,7 +41,6 @@ on_ft = ['cs']
 #{{{
 [[plugins]]
 repo = 'fatih/vim-go'
-lazy = 1
 on_ft = ['go']
 hook_source = "call Source('rc/plugins/vim-go.rc.vim')"
 #}}}
@@ -61,6 +57,7 @@ on_ft = ['html', 'css']
 # css/less/sass/html color preview for vim
 repo = 'gko/vim-coloresque'
 on_ft = ['html', 'css']
+# }}}
 # Python
 #{{{
 [[plugins]]
@@ -79,10 +76,6 @@ on_ft = ['python']
 # A nicer Python indentation style for vim.
 repo = 'hynek/vim-python-pep8-indent'
 on_ft = ['python']
-[[plugins]]
-# Text objects for Python.
-repo = 'bps/vim-textobj-python'
-on_ft = ['python']
 #}}}
 # TeX
 #{{{
@@ -93,21 +86,6 @@ on_ft = ['tex']
 hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
 #}}}
 
-
-# Cypher
-#{{{
-[[plugins]]
-# Very basic Vim syntax for Cypher
-repo = 'neo4j-contrib/cypher-vim-syntax'
-on_ft = ['cypher']
-#}}}
-# Dockerfile
-#{{{
-[[plugins]]
-# Vim syntax file & snippets for Docker's Dockerfile
-repo = 'ekalinin/Dockerfile.vim'
-on_ft = ['docker']
-#}}}
 # JSON
 #{{{
 [[plugins]]
@@ -129,9 +107,6 @@ on_ft = ['json']
 #Realtime preview by Vim. (Markdown, reStructuredText, textile)
 repo = 'kannokanno/previm'
 on_ft = ['markdown']
-#}}}
-# PlantUML
-#{{{
 #}}}
 # YAML
 #{{{

@@ -6,9 +6,6 @@ if has('vim_starting')
   let g:is_vim8 = has('nvim') && v:version >= 800
   let g:is_nvim = has('nvim')
 
-  let g:has_lua = has('lua')
-  let g:has_python = has('python')
-  let g:has_python3 = has('python3')
 
   let $CACHE = expand('~/.cache')
 
@@ -22,12 +19,15 @@ if has('vim_starting')
     let g:config_dir = expand('~/vimfiles')
     if g:is_nvim
       let g:config_dir = expand('~/AppData/Local/nvim')
-      let g:python_host_prog = expand('C:/Program Files/Python35')
-      let g:python3_host_prog = expand('C:/Program Files (x86)/Python27')
+      let g:python_host_prog = expand('C:/Program Files (x86)/Python27')
+      let g:python3_host_prog = expand('C:/Program Files/Python35')
       let $PATH = $PATH . ';C:/Program Files/Python35;C:/Program Files/Python35/Scripts'
     endif
   endif
 
+  let g:has_lua = has('lua')
+  let g:has_python = has('python')
+  let g:has_python3 = has('python3')
 endif
 
 function! Source(path) abort

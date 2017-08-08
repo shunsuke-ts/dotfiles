@@ -3,8 +3,7 @@
 # 🌠 Dark powered asynchronous completion framework for neovim
 repo = 'Shougo/deoplete.nvim'
 depends = ['context_filetype.vim']
-if = 'g:is_nvim'
-lazy = 1
+if = "g:is_nvim"
 hook_source = '''
   let g:deoplete#enable_at_startup = 1
   call Source('rc/plugins/deoplete.nvim.rc.vim')
@@ -14,6 +13,7 @@ hook_source = '''
 # repo = 'zchee/deoplete-clang'
 # depends = 'deoplete.nvim'
 # on_ft = ['c', 'cpp']
+
 [[plugins]]
 repo = 'tweekmonster/deoplete-clang2'
 on_ft = ['c', 'cpp']
@@ -37,9 +37,9 @@ on_ft = 'go'
 [[plugins]]
 # 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
 repo = 'Shougo/denite.nvim'
-on_cmd = 'Denite'
 if = 'g:is_nvim || g:is_vim8'
-lazy = 1
+build = ':UpdateRemotePlugins'
+on_cmd = 'Denite'
 hook_source = "call Source('rc/plugins/denite.nvim.rc.vim')"
 
 [[plugins]]
@@ -47,5 +47,16 @@ hook_source = "call Source('rc/plugins/denite.nvim.rc.vim')"
 repo = 'Shougo/defx.nvim'
 depends = 'denite.nvim'
 on_source = 'denite.nvim'
-if = 0
 # }}}
+
+[[plugins]]
+# 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
+repo = 'Shougo/deol.nvim'
+on_cmd = 'Deol'
+on_source = ['denite.nvim']
+hook_add = '''
+  " nnoremap <silent> N :<C-u>call deol#new({'command': 'zsh'})<CR>
+  " nnoremap <silent> [Space]s :<C-u>Deol zsh<CR>
+  " nnoremap <silent> [Window]D  :<C-u>call deol#kill_editor()<CR>
+'''
+hook_source = "call Source('rc/plugins/deol.nvim.rc.vim')"

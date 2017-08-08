@@ -5,4 +5,3 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 # surround.vim: quoting/parenthesizing made simple http://www.vim.org/scripts/script.php…
 repo = 'tpope/vim-surround'
-

@@ -45,6 +45,16 @@ repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
 
 [[plugins]]
+# Very basic Vim syntax for Cypher
+repo = 'neo4j-contrib/cypher-vim-syntax'
+on_ft = ['cypher']
+
+[[plugins]]
+# Vim syntax file & snippets for Docker's Dockerfile
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['docker']
+
+[[plugins]]
 # vim syntax file for plantuml
 repo = 'aklt/plantuml-syntax'
 on_ft = ['plantuml']

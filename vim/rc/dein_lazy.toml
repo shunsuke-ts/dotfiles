@@ -26,5 +26,6 @@ on_event = 'CompleteDone'
 hook_source = "call echodoc#enable()"
 
 [[plugins]]
+# Asynchronous linting and make framework for Neovim/Vim
 repo = 'neomake/neomake'
 hook_source = "call Source('rc/plugins/neomake.rc.vim')"
