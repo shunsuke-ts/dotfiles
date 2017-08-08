@@ -1,11 +1,10 @@
-# vim plugin
-
 [[plugins]]
 # ⚡️ Dark powered Vim/Neovim plugin manager
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
+on_if = "!g:is_nvim"
 build = 'make'
 hook_add = '''
   if g:is_win
@@ -14,17 +13,8 @@ hook_add = '''
 '''
 
 [[plugins]]
+# The standard snippets repository for neosnippet
 repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'Shougo/vimshell'
-
-
-[[plugins]]
-repo = 'itchyny/lightline.vim'
-
-[[plugins]]
-repo = 'kana/vim-textobj-user'
 
 [[plugins]]
 repo = 'tyru/open-browser.vim'

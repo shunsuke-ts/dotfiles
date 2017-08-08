@@ -1,0 +1,63 @@
+[[plugins]]
+# Context filetype library for Vim script
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+# Vim constext filetype
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+hook_add = '''
+  " Disable in Normal mode
+  let g:precious_enable_switch_CursorMoved = { '*': 0, 'help': 1 }
+  " Switch
+  augroup PreciousSwitch
+    autocmd!
+    autocmd InsertEnter * :PreciousSwitch
+    autocmd InsertLeave * :PreciousReset
+  augroup END
+'''
+
+[[plugins]]
+# Additional Vim syntax highlighting for C++ (including C++11/14)
+repo = 'octol/vim-cpp-enhanced-highlight'
+on_ft = ['c', 'cpp']
+hook_source = '''
+  let g:cpp_class_scope_highlight = 1 " class scope
+  let g:cpp_member_variable_highlight = 1 " member variables
+  let g:cpp_class_decl_highlight = 1 " class names in declarations
+  let g:cpp_concepts_highlight = 1 " library concepts
+  let g:cpp_no_function_highlight = 0 " user defined functions
+
+  " hightlight template functions(Either)
+  " Note: C++ template syntax is notoriously difficult to parse, so don't expect this feature to be perfect.
+  let g:cpp_experimental_simple_template_highlight = 0 " which works in most cases, but can be a little slow on large files
+  let g:cpp_experimental_template_highlight = 1 " which is a faster / but has some corner cases where it doesn't work.
+'''
+
+[[plugins]]
+# CSS3 syntax (and syntax defined in some foreign specifications) support for Vim's built-in syntax/css.vim
+repo = 'hail2u/vim-css3-syntax'
+on_ft = ['html', 'css']
+
+[[plugins]]
+# Kotlin plugin for Vim. Featuring: syntax highlighting, basic indentation, Syntastic support
+repo = 'udalov/kotlin-vim'
+on_ft = ['kotlin']
+
+[[plugins]]
+# vim syntax file for plantuml
+repo = 'aklt/plantuml-syntax'
+on_ft = ['plantuml']
+hook_source = '''
+  let g:plantuml_executable_script = "plantuml"
+'''
+
+[[plugins]]
+# Vim syntax for TOML
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+# An excellent Vim's syntax highlighting file for Vim script
+repo = 'vim-jp/syntax-vim-ex'
+on_ft = ['vim']

@@ -1,26 +1,32 @@
 if has('vim_starting')
   let g:config_dir = expand('~/.vim')
-  let g:is_win = 0
-  let g:is_mac = 0
-  let g:is_unix = 0
-  let g:is_vim8 = 0
+  let g:is_win = has('win32') || has('win64')
+  let g:is_mac = has('mac')
+  let g:is_unix = has('unix')
+  let g:is_vim8 = has('nvim') && v:version >= 800
+  let g:is_nvim = has('nvim')
 
-  if v:version >= 800
-    let g:is_vim8 = 1
-  endif
-  if has('win32') || has('win64')
-    let g:is_win = 1
-    let g:config_dir = expand('~/vimfiles')
-    let $PATH = $PATH . ';C:\Program Files\Python35;C:\Program Files\Python35\Scripts'
-    set shellslash
-  elseif has('mac')
-    let g:is_mac = 1
-  else
-    let g:is_unix = 1
-  endif
+  let g:has_lua = has('lua')
+  let g:has_python = has('python')
+  let g:has_python3 = has('python3')
 
-  let g:is_nvim = 0
   let $CACHE = expand('~/.cache')
+
+  if g:is_nvim
+    let g:config_dir = expand('~/.config/nvim')
+    let g:python_host_prog = expand('/usr/bin/python2.7')
+    let g:python3_host_prog = expand('/usr/bin/python3.5')
+  endif
+  if g:is_win
+    set shellslash
+    let g:config_dir = expand('~/vimfiles')
+    if g:is_nvim
+      let g:config_dir = expand('~/AppData/Local/nvim')
+      let g:python_host_prog = expand('C:/Program Files/Python35')
+      let g:python3_host_prog = expand('C:/Program Files (x86)/Python27')
+      let $PATH = $PATH . ';C:/Program Files/Python35;C:/Program Files/Python35/Scripts'
+    endif
+  endif
 
 endif
 
@@ -31,19 +37,13 @@ function! Source(path) abort
   endif
 endfunction
 
-augroup vimrc_autoreload
-  autocmd!
-  autocmd BufWritePost .vimrc execute 'source' $MYVIMRC
-augroup END
-
-" Completion 
+" Completion
 set completeopt=menuone
 
-call Source('rc/system.rc.vim')
-call Source('rc/dein.rc.vim')
 call Source('rc/basic.rc.vim')
 call Source('rc/indent.rc.vim')
 call Source('rc/mappings.rc.vim')
 call Source('rc/encoding.rc.vim')
+call Source('rc/dein.rc.vim')
 
 filetype plugin indent on

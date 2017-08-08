@@ -1,4 +1,3 @@
-let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#disable_auto_complete = 0
 let g:neocomplete#enable_auto_close_preview = 1
 
@@ -9,7 +8,7 @@ let g:neocomplete#auto_complete_delay = 30
 let g:neocomplete#enable_fuzzy_completion = 1
 let g:neocomplete#enable_refresh_always = 1
 
-let g:neocomplete#auto_completion_start_length = 2
+let g:neocomplete#auto_completion_start_length = 1
 let g:neocomplete#manual_completion_start_length = 0
 let g:neocomplete#min_keyword_length = 2
 let g:neocomplete#enable_auto_select = 1
@@ -21,30 +20,23 @@ let g:neocomplete#sources#dictionary#dictionaries = {
 let g:neocomplete#enable_auto_delimiter = 1
 let g:neocomplete#max_list = 100
 
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 if !exists('g:neocomplete#sources#omni#functions')
   let g:neocomplete#sources#omni#functions = {}
 endif
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
 
-let g:neocomplete#force_omni_input_patterns.c =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:neocomplete#force_omni_input_patterns.cpp =
-      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
-let g:neocomplete#force_omni_input_patterns.cs = 
-      \ '.*[^=\);]'
-let g:neocomplete#force_omni_input_patterns.go =
-      \ '\(\h\|\h\w\)\.\w*'
- let g:neocomplete#force_omni_input_patterns.javascript =
-      \ '[^. \t]\.\%(\h\w*\)\?'
-let g:neocomplete#force_omni_input_patterns.python = 
-      \ '\h\w*\|[^. \t]\.\w*'
-let g:neocomplete#force_omni_input_patterns.tex = 
-      \ '\(\\cite{\)\|\(\\ref{\)'
+let g:neocomplete#force_omni_input_patterns.c          = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#force_omni_input_patterns.cpp        = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplete#force_omni_input_patterns.cs         =  '.*[^=\);]'
+let g:neocomplete#force_omni_input_patterns.go         = '\(\h\|\h\w\)\.\w*'
+let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
+let g:neocomplete#force_omni_input_patterns.python     = '\h\w*\|[^. \t]\.\w*'
+let g:neocomplete#force_omni_input_patterns.tex        = '\(\\cite{\)\|\(\\ref{\)'
 
 if !exists('g:neocomplete#keyword_patterns')
   let g:neocomplete#keyword_patterns = {}

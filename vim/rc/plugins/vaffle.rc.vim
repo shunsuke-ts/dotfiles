@@ -1,1 +1,0 @@
-command! Vaffle :tabnew | :Vaffle

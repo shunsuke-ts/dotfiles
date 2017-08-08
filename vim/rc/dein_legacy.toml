@@ -1,0 +1,15 @@
+[[plugins]]
+# Next generation completion framework after neocomplcache
+repo = 'Shougo/neocomplete.vim' # -> https://github.com/Shougo/deoplete.nvim
+depends = 'context_filetype.vim'
+if = "!g:is_nvim && g:has_lua"
+on_event = 'InsertEnter'
+hook_source = '''
+  let g:neocomplete#enable_at_startup = 1
+  call Source('rc/plugins/neocomplete.rc.vim')
+'''
+
+[[plugins]]
+# 🐚 Powerful shell implemented by vim.
+repo = 'Shougo/vimshell' # -> https://github.com/Shougo/deol.nvim
+if = "!g:is_nvim && !g:is_vim8"

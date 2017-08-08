@@ -1,18 +1,13 @@
 [[plugins]]
-# Context filetype library for Vim script
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
 # Lightweight filer for Vim
 repo = 'cocopon/vaffle.vim'
 on_cmd = 'Vaffle'
-hook_add = "call Source('rc/plugins/vaffle.rc.vim')"
 
 [[plugins]]
 # Asynchronously control git repositories in Neovim/Vim 8 http://www.vim.org/scripts/script.php…
 repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
-if = 'g:is_nvim || g:is_vim8'
+if = "g:is_nvim || g:is_vim8"
 
 [[plugins]]
 # Vim script for text filtering and alignment

@@ -1,0 +1,3 @@
+[[plugins]]
+# Vim plugin: Create your own text objects http://www.vim.org/scripts/script.php…
+repo = 'kana/vim-textobj-user'

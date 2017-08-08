@@ -1,24 +1,9 @@
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-depends = 'context_filetype.vim'
-if = "!g:is_nvim && has('lua')"
-on_event = 'InsertEnter'
-hook_source = "call Source('rc/plugins/neocomplete.rc.vim')"
-
-[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets', 'context_filetype.vim']
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
 hook_source = "call Source('rc/plugins/neosnippet.rc.vim')"
-
-[[plugins]]
-repo = 'ujihisa/vimshell-ssh'
-on_ft = 'vimshell'
-
-[[plugins]]
-repo = 'Shougo/neossh.vim'
-on_ft = ['vimfiler', 'vimshell']
 
 [[plugins]]
 repo = 'Shougo/neoinclude.vim'
@@ -38,13 +23,8 @@ on_source = ['unite.vim', 'denite.nvim']
 [[plugins]]
 repo = 'Shougo/echodoc.vim'
 on_event = 'CompleteDone'
-hook_source = 'call echodoc#enable()'
+hook_source = "call echodoc#enable()"
 
 [[plugins]]
 repo = 'neomake/neomake'
 hook_source = "call Source('rc/plugins/neomake.rc.vim')"
-
-[[plugins]]
-repo = 'tpope/vim-dispatch'
-
-

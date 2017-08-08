@@ -2,18 +2,24 @@
 [[plugins]]
 # 🌠 Dark powered asynchronous completion framework for neovim
 repo = 'Shougo/deoplete.nvim'
-depends = 'context_filetype.vim'
+depends = ['context_filetype.vim']
 if = 'g:is_nvim'
-on_i = 1
 lazy = 1
-on_event = 'InsertEnter'
-hook_add = "let g:deoplete#enable_at_startup = 1"
-hook_source = "call Source('rc/plugins/deoplete.nvim.rc.nvim')"
+hook_source = '''
+  let g:deoplete#enable_at_startup = 1
+  call Source('rc/plugins/deoplete.nvim.rc.vim')
+'''
 
+# [[plugins]]
+# repo = 'zchee/deoplete-clang'
+# depends = 'deoplete.nvim'
+# on_ft = ['c', 'cpp']
 [[plugins]]
-repo = 'zchee/deoplete-clang'
-depends = 'deoplete.nvim'
+repo = 'tweekmonster/deoplete-clang2'
 on_ft = ['c', 'cpp']
+hook_source = '''
+  autocmd FileType c,cpp let b:clang2_orig_maps = {}
+'''
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
