@@ -1,4 +1,16 @@
 [[plugins]]
+# Interactive command execution in Vim.
+repo = 'Shougo/vimproc.vim'
+if = "!g:is_nvim"
+build = 'make'
+on_source = ['unite.vim', 'vimshell.vim']
+hook_add = '''
+  if g:is_win
+    let g:vimproc#download_windows_dll = 1
+  endif
+'''
+
+[[plugins]]
 # Next generation completion framework after neocomplcache
 repo = 'Shougo/neocomplete.vim' # -> https://github.com/Shougo/deoplete.nvim
 depends = 'context_filetype.vim'

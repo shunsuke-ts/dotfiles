@@ -19,9 +19,8 @@ if has('vim_starting')
     let g:config_dir = expand('~/vimfiles')
     if g:is_nvim
       let g:config_dir = expand('~/AppData/Local/nvim')
-      let g:python_host_prog = expand('C:/Program Files (x86)/Python27')
-      let g:python3_host_prog = expand('C:/Program Files/Python35')
-      let $PATH = $PATH . ';C:/Program Files/Python35;C:/Program Files/Python35/Scripts'
+      let g:python_host_prog = expand('C:/App/Python27/python.exe')
+      let g:python3_host_prog = expand('C:/App/Python35/python.exe')
     endif
   endif
 

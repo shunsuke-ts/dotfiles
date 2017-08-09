@@ -2,7 +2,9 @@
 # Lightweight filer for Vim
 repo = 'cocopon/vaffle.vim'
 on_cmd = 'Vaffle'
+hook_add = "call Source('rc/plugins/vaffle.rc.vim')"
 
+# Git {{{
 [[plugins]]
 # Asynchronously control git repositories in Neovim/Vim 8 http://www.vim.org/scripts/script.php…
 repo = 'lambdalisue/gina.vim'
@@ -10,9 +12,22 @@ on_cmd = 'Gina'
 if = "g:is_nvim || g:is_vim8"
 
 [[plugins]]
+# A git wrapper focus on simplity and usability
+repo = 'chemzqm/vim-easygit'
+hook_add = '''
+  let g:easygit_enable_command = 1
+'''
+# }}}
+
+[[plugins]]
 # Vim script for text filtering and alignment
 repo = 'majutsushi/tagbar'
 if = "executable('ctags')"
-lazy = 1
 on_cmd = 'TagbarToggle'
 hook_add = "call Source('rc/plugins/tagbar.rc.vim')"
+
+[[plugins]]
+# Ctags generator for Vim http://www.vim.org/scripts/script.php…
+repo = 'szw/vim-tags'
+if = "executable('ctags')"
+on_cmd = 'TagsGenerate'

@@ -12,7 +12,6 @@ on_source = ['vim-airline']
 repo = 'itchyny/lightline.vim'
 if = 0
 
-
 # color scheme {{{
 [[plugins]]
 # Molokai color scheme for Vim

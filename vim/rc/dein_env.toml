@@ -1,13 +1,14 @@
 # Supported Environments
 
-# Languages
-# C/C++ XXX
-# C# XXX
-# Golang OK
+# C#
+# C/C++
+# Golang
 # HTML/CSS
+# Java
 # Python
 # TeX
 
+# Emoji
 # JSON
 # Markdown
 # PlantUML
@@ -40,6 +41,7 @@ on_ft = ['cs']
 # Golang
 #{{{
 [[plugins]]
+# Go development plugin for Vim https://patreon.com/fatih
 repo = 'fatih/vim-go'
 on_ft = ['go']
 hook_source = "call Source('rc/plugins/vim-go.rc.vim')"
@@ -57,12 +59,21 @@ on_ft = ['html', 'css']
 # css/less/sass/html color preview for vim
 repo = 'gko/vim-coloresque'
 on_ft = ['html', 'css']
-# }}}
+#}}}
+# Java
+#{{{
+[[plugins]]
+# Updated javacomplete plugin for vim.
+repo = 'artur-shaik/vim-javacomplete2'
+if = "!g:is_nvim"
+on_ft = ['java']
+#}}}
 # Python
 #{{{
 [[plugins]]
 # Using the jedi autocompletion library for VIM.
 repo = 'davidhalter/jedi-vim'
+if = "!g:is_nvim"
 lazy = 1
 on_ft = ['python']
 hook_source = "call Source('rc/plugins/jedi-vim.rc.vim')"
@@ -86,6 +97,12 @@ on_ft = ['tex']
 hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
 #}}}
 
+# Emoji
+#{{{
+[[plugins]]
+# 😃 Emoji in Vim
+repo = 'junegunn/vim-emoji'
+#}}}
 # JSON
 #{{{
 [[plugins]]
@@ -100,13 +117,6 @@ on_ft = ['json']
 repo = '5t111111/neat-json.vim'
 if = "has('python')"
 on_ft = ['json']
-#}}}
-# Markdown
-#{{{
-[[plugins]]
-#Realtime preview by Vim. (Markdown, reStructuredText, textile)
-repo = 'kannokanno/previm'
-on_ft = ['markdown']
 #}}}
 # YAML
 #{{{

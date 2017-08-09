@@ -1,8 +1,4 @@
 [[plugins]]
-# Context filetype library for Vim script
-repo = 'Shougo/context_filetype.vim'
-
-[[plugins]]
 # Vim constext filetype
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
@@ -53,6 +49,24 @@ on_ft = ['cypher']
 # Vim syntax file & snippets for Docker's Dockerfile
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = ['docker']
+
+[[plugins]]
+# GitHub Flavored Markdown syntax highlight extension for Vim
+repo = 'rhysd/vim-gfm-syntax'
+lazy = 1
+on_event = 'BufRead'
+hook_add = '''
+  " Only README.md enables extra highlight
+  let g:gfm_syntax_enable_always = 0
+  let g:gfm_syntax_enable_filetypes = ['markdown.gfm']
+  augroup MarkdownGFM
+    autocmd BufRead,BufNew,BufNewFile README.md setlocal filetype=markdown.gfm
+  augroup END
+'''
+
+# [[plugins]]
+# # Syntax source for neocomplete/deoplete/ncm
+# repo = 'Shougo/neco-syntax'
 
 [[plugins]]
 # vim syntax file for plantuml

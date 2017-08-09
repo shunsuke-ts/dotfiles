@@ -30,5 +30,6 @@ augroup setomnifunc
   "autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType go setlocal omnifunc=go#complete#Complete
+  autocmd FileType java setlocal omnifunc=javacomplete#Complete
   autocmd FileType python setlocal omnifunc=jedi#completions
 augroup END

@@ -5,3 +5,13 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 # surround.vim: quoting/parenthesizing made simple http://www.vim.org/scripts/script.php…
 repo = 'tpope/vim-surround'
+
+[[plugins]]
+# Smart line joint vim plugin.
+repo = 'osyo-manga/vim-jplus'
+lazy = 1
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap J <Plug>(jplus)
+  vmap J <Plug>(jplus)
+'''

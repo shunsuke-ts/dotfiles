@@ -16,6 +16,8 @@ hook_source = '''
 
 [[plugins]]
 repo = 'tweekmonster/deoplete-clang2'
+if = "g:is_nvim"
+depends = 'deoplete.nvim'
 on_ft = ['c', 'cpp']
 hook_source = '''
   autocmd FileType c,cpp let b:clang2_orig_maps = {}
@@ -23,14 +25,15 @@ hook_source = '''
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
+if = "g:is_nvim"
 depends = 'deoplete.nvim'
-on_ft = 'python'
+on_ft = ['python']
 
 [[plugins]]
 repo = 'zchee/deoplete-go'
+if = "g:is_nvim"
 depends = 'deoplete.nvim'
-on_i = 1
-on_ft = 'go'
+on_ft = ['go']
 # }}}
 
 # denite.nvim {{{
@@ -38,20 +41,72 @@ on_ft = 'go'
 # 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
 repo = 'Shougo/denite.nvim'
 if = 'g:is_nvim || g:is_vim8'
-build = ':UpdateRemotePlugins'
 on_cmd = 'Denite'
 hook_source = "call Source('rc/plugins/denite.nvim.rc.vim')"
+# {{{
+hook_add = '''
+  "  nnoremap <silent> ;r
+  "       \ :<C-u>Denite -buffer-name=register
+  "       \ register neoyank<CR>
+  " xnoremap <silent> ;r
+  "       \ :<C-u>Denite -default-action=replace -buffer-name=register
+  "       \ register neoyank<CR>
+  " nnoremap <silent> [Window]<Space>
+  "       \ :<C-u>Denite file_rec:~/.vim/rc<CR>
+  " nnoremap <silent> / :<C-u>Denite -buffer-name=search -auto-highlight
+  "       \ line<CR>
+  " nnoremap <silent> * :<C-u>DeniteCursorWord -buffer-name=search
+  "       \ -auto-highlight -mode=normal line<CR>
+  " nnoremap <silent> [Window]s :<C-u>Denite file_point file_old
+  "       \ -sorters=sorter_rank
+  "       \ `finddir('.git', ';') != '' ? 'file_rec/git' : 'file_rec'`<CR>
+  " nnoremap <silent><expr> tt  &filetype == 'help' ?  "g\<C-]>" :
+  "       \ ":\<C-u>DeniteCursorWord -buffer-name=tag -immediately
+  "       \  tag:include\<CR>"
+  " nnoremap <silent><expr> tp  &filetype == 'help' ?
+  "       \ ":\<C-u>pop\<CR>" : ":\<C-u>Denite -mode=normal jump\<CR>"
+  " nnoremap <silent> [Window]n :<C-u>Denite dein<CR>
+  " nnoremap <silent> [Window]g :<C-u>Denite ghq<CR>
+  " nnoremap <silent> ;g :<C-u>Denite -buffer-name=search
+  "       \ -no-empty -mode=normal grep<CR>
+  " nnoremap <silent> n :<C-u>Denite -buffer-name=search
+  "       \ -resume -mode=normal -refresh<CR>
+  " nnoremap <silent> ft :<C-u>Denite filetype<CR>
+  " nnoremap <silent> <C-t> :<C-u>Denite
+  "       \ -select=`tabpagenr()-1` -mode=normal deol<CR>
+  " nnoremap <silent> <C-k> :<C-u>Denite -mode=normal change jump<CR>
+  " nnoremap <silent> [Space]gs :<C-u>Denite gitstatus<CR>
+  " nnoremap <silent> ;;
+  "       \ :<C-u>Denite command command_history<CR>
+'''
+# }}}
 
 [[plugins]]
 # 📁 The dark powered file explorer implementation using denite.nvim
 repo = 'Shougo/defx.nvim'
-depends = 'denite.nvim'
-on_source = 'denite.nvim'
+if = 'g:is_nvim || g:is_vim8'
+depends = ['denite.nvim']
+on_source = ['denite.nvim']
+
+[[plugins]]
+# No description or website provided.
+repo = 'pocari/vim-denite-emoji'
+if = 'g:is_nvim || g:is_vim8'
+depends = ['denite.nvim', 'vim-emoji']
+on_source = ['denite.nvim']
+
+[[plugins]]
+# gitlog, gitstatus and gitchanged source for denite.nvim
+repo = 'chemzqm/denite-git'
+if = 'g:is_nvim || g:is_vim8'
+depends = ['denite.nvim', 'vim-easygit']
+on_source = ['denite.nvim']
 # }}}
 
 [[plugins]]
 # 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
 repo = 'Shougo/deol.nvim'
+if = "g:is_nvim"
 on_cmd = 'Deol'
 on_source = ['denite.nvim']
 hook_add = '''

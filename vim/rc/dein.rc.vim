@@ -5,6 +5,7 @@ endif
 let g:dein#install_progress_type = 'title'
 let g:dein#install_message_type = 'none'
 let g:dein#enable_notification = 1
+let g:dein#install_log_filename = expand('~/dein.log')
 
 let s:dein_path = expand('$CACHE/dein')
 let s:dein_dir = s:dein_path . '/repos/github.com/Shougo/dein.vim'
@@ -26,8 +27,8 @@ call dein#begin(s:dein_path)
   call dein#load_toml(s:rc_dir . 'dein_textobj.toml', {'lazy': 0})
   call dein#load_toml(s:rc_dir . 'dein_edit.toml',   {'lazy': 0})
   call dein#load_toml(s:rc_dir . 'dein_neo.toml',    {'lazy': 0})
-  call dein#load_toml(s:rc_dir . 'dein_sys.toml',    {'lazy': 0})
-  call dein#load_toml(s:rc_dir . 'dein_legacy.toml',  {'lazy': 0})
+  call dein#load_toml(s:rc_dir . 'dein_sys.toml',    {'lazy': 1})
+  call dein#load_toml(s:rc_dir . 'dein_legacy.toml',  {'lazy': 1})
   call dein#load_toml(s:rc_dir . 'dein_unite.toml',  {'lazy': 1})
   call dein#load_toml(s:rc_dir . 'dein_lazy.toml',   {'lazy': 1})
   call dein#load_toml(s:rc_dir . 'dein_env.toml',    {'lazy': 1})
