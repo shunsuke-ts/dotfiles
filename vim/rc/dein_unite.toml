@@ -1,26 +1,33 @@
 [[plugins]]
 repo = 'Shougo/unite.vim'
+if = "!(g:is_nvim && g:is_vim8)"
 
 [[plugins]]
 repo = 'Shougo/unite-help'
+if = "!(g:is_nvim && g:is_vim8)"
 on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'Shougo/unite-outline'
+if = "!(g:is_nvim && g:is_vim8)"
 on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'thinca/vim-unite-history'
+if = "!(g:is_nvim && g:is_vim8)"
 on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'ujihisa/unite-colorscheme'
+if = "!(g:is_nvim && g:is_vim8)"
 on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'osyo-manga/unite-filetype'
+if = "!(g:is_nvim && g:is_vim8)"
 on_source = ['unite.vim']
 
 [[plugins]]
 repo = 'Shougo/unite-sudo'
+if = "!(g:is_nvim && g:is_vim8)"
 on_source = ['unite.vim']

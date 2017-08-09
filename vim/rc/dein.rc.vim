@@ -22,17 +22,17 @@ endif
 
 call dein#begin(s:dein_path)
   call dein#load_toml(s:rc_dir . 'dein.toml',        {'lazy': 0})
+  call dein#load_toml(s:rc_dir . 'dein_lazy.toml',   {'lazy': 1})
+
   call dein#load_toml(s:rc_dir . 'dein_syntax.toml', {'lazy': 0})
   call dein#load_toml(s:rc_dir . 'dein_visual.toml', {'lazy': 0})
-  call dein#load_toml(s:rc_dir . 'dein_textobj.toml', {'lazy': 0})
   call dein#load_toml(s:rc_dir . 'dein_edit.toml',   {'lazy': 0})
-  call dein#load_toml(s:rc_dir . 'dein_neo.toml',    {'lazy': 0})
   call dein#load_toml(s:rc_dir . 'dein_sys.toml',    {'lazy': 1})
-  call dein#load_toml(s:rc_dir . 'dein_legacy.toml',  {'lazy': 1})
-  call dein#load_toml(s:rc_dir . 'dein_unite.toml',  {'lazy': 1})
-  call dein#load_toml(s:rc_dir . 'dein_lazy.toml',   {'lazy': 1})
+  call dein#load_toml(s:rc_dir . 'dein_neo.toml',    {'lazy': 1})
   call dein#load_toml(s:rc_dir . 'dein_env.toml',    {'lazy': 1})
-  call dein#end()
+  call dein#load_toml(s:rc_dir . 'dein_unite.toml',  {'lazy': 1})
+  call dein#load_toml(s:rc_dir . 'dein_legacy.toml', {'lazy': 1})
+call dein#end()
 call dein#save_state()
 
 augroup DeinInstall

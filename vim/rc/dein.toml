@@ -15,6 +15,3 @@ hook_add = '''
 [[plugins]]
 # The standard snippets repository for neosnippet
 repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'tyru/open-browser.vim'
