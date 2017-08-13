@@ -1,7 +1,9 @@
 [[plugins]]
 # Vim constext filetype
 repo = 'osyo-manga/vim-precious'
+lazy = 1
 depends = ['context_filetype.vim']
+on_source = ['context_filetype.vim']
 hook_add = '''
   " Disable in Normal mode
   let g:precious_enable_switch_CursorMoved = { '*': 0, 'help': 1 }

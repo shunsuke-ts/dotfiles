@@ -2,7 +2,7 @@
 [[plugins]]
 # Clang completion plugin for vim
 repo = 'justmao945/vim-clang'
-if = "executable('clang')"
+if = "!g:is_nvim"
 on_ft = ['c', 'cpp']
 hook_source = "call Source('rc/plugins/vim-clang.rc.vim')"
 #}}}
@@ -85,6 +85,13 @@ hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
 [[plugins]]
 # 😃 Emoji in Vim
 repo = 'junegunn/vim-emoji'
+#}}}
+
+# Doxygen {{{
+[[plugins]]
+# Simplify Doxygen documentation in C, C++, Python. http://www.vim.org/scripts/script.php…
+repo = 'vim-scripts/DoxygenToolkit.vim'
+on_ft = ['c', 'cpp', 'Python']
 #}}}
 
 # Markdown {{{

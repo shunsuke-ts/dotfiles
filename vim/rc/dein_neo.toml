@@ -4,37 +4,65 @@
 repo = 'Shougo/deoplete.nvim'
 depends = ['context_filetype.vim']
 if = "g:is_nvim"
+on_event = 'InsertCharPre'
 hook_source = '''
   let g:deoplete#enable_at_startup = 1
   call Source('rc/plugins/deoplete.nvim.rc.vim')
 '''
 
 # [[plugins]]
+# # deoplete.nvim source for C/C++/Obj-C/Obj-C++ with clang-python3
 # repo = 'zchee/deoplete-clang'
-# depends = 'deoplete.nvim'
+# depends = ['deoplete.nvim']
 # on_ft = ['c', 'cpp']
 
 [[plugins]]
+# No description or website provided.
 repo = 'tweekmonster/deoplete-clang2'
 if = "g:is_nvim"
-depends = 'deoplete.nvim'
+depends = ['deoplete.nvim']
 on_ft = ['c', 'cpp']
 hook_source = '''
-  autocmd FileType c,cpp let b:clang2_orig_maps = {}
+  augroup DeopleteClang2
+    autocmd!
+    autocmd FileType c,cpp let b:clang2_orig_maps = {}
+  augroup END
 '''
 
 [[plugins]]
+# deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
+repo = 'zchee/deoplete-go'
+if = "g:is_nvim"
+depends = ['deoplete.nvim']
+on_ft = ['go']
+
+[[plugins]]
+# An experimental deoplete source for LaTeX completion
+repo = 'poppyschmo/deoplete-latex'
+if = "g:is_nvim"
+depends = ['deoplete.nvim']
+on_ft = ['tex']
+hook_source = '''
+  " Include macros like `\jhat` from MathJax and KaTeX.
+  let g:deoplete#sources#latex#include_web_math = 1
+  " Include a hodgepodge of miscellaneous commands and environments.
+  let g:deoplete#sources#latex#include_misc = 1
+'''
+
+
+[[plugins]]
+# deoplete.nvim source for Python
 repo = 'zchee/deoplete-jedi'
 if = "g:is_nvim"
 depends = 'deoplete.nvim'
+depends = ['deoplete.nvim']
 on_ft = ['python']
 
 [[plugins]]
-repo = 'zchee/deoplete-go'
-if = "g:is_nvim"
-depends = 'deoplete.nvim'
-on_ft = ['go']
-# }}}
+# The vim source for neocomplete/deoplete
+repo='Shougo/neco-vim'
+on_ft = ['vim']
+#}}}
 
 # denite.nvim {{{
 [[plugins]]

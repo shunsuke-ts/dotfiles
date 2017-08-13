@@ -1,4 +1,4 @@
-if exists('b:did_ftplugin_c')
+if exists('b:did_ftplugin_cpp')
   finish
 endif
 
@@ -12,4 +12,4 @@ setlocal shiftwidth=2
 setlocal foldmethod=marker
 "setlocal commentstring=
 
-let b:did_ftplugin_c = 1
+let b:did_ftplugin_cpp = 1

@@ -5,5 +5,4 @@ if executable('rg')
   call denite#custom#var('grep', 'command', ['rg'])
 endif
 
-" Substitute CtrlP
 nnoremap <silent> <C-p> :<C-u>Denite file_rec<CR>

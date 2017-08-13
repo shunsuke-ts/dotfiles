@@ -5,6 +5,6 @@ let g:vaffle_show_hidden_files = 1
 
 command! VaffleTab :tabedit | :Vaffle
 
-nnoremap ,vf :Vaffle <CR>
-nnoremap ,vft :VaffleTab <CR>
+nnoremap ,vfa :<C-u>Vaffle <CR>
+nnoremap ,vft :<C-u>VaffleTab <CR>
 
