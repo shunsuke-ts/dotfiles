@@ -48,6 +48,12 @@ repo = 'udalov/kotlin-vim'
 on_ft = ['kotlin']
 #}}}
 
+# CMake {{{
+[[plugins]]
+# Vim syntax highlighting rules for modern CMake.
+repo = 'nickhutchinson/vim-cmake-syntax'
+on_ft = ['cmake']
+#}}}
 
 # Cypher {{{
 [[plugins]]
