@@ -10,6 +10,7 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.ino setlocal filetype=arduino
   autocmd BufNewFile,BufRead *.java setlocal filetype=java
   autocmd BufNewFile,BufRead *.js setlocal filetype=javascript
+  autocmd BufNewFile,BufRead *.l setlocal filetype=lex
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
   autocmd BufNewFile,BufRead *.pu setlocal filetype=plantuml
   autocmd BufNewFile,BufRead *.py setlocal filetype=python
@@ -18,6 +19,7 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.tex setlocal filetype=tex
   autocmd BufNewFile,BufRead *.toml set filetype=toml
   autocmd BufNewFile,BufRead *.vim,vimrc,gvimrc setlocal filetype=vim
+  autocmd BufNewFile,BufRead *.y setlocal filetype=yacc
   autocmd BufNewFile,BufRead *.zshrc setlocal filetype=zsh
 
   autocmd BufNewFile,BufRead Dockerfile setlocal filetype=docker
@@ -25,8 +27,7 @@ augroup END
 
 augroup setomnifunc
   autocmd!
-  autocmd FileType c setlocal omnifunc=ClangComplete
-  autocmd FileType cpp setlocal omnifunc=ClangComplete
+  autocmd FileType c,cpp,lex,yacc setlocal omnifunc=ClangComplete
   "autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
   autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType go setlocal omnifunc=go#complete#Complete
