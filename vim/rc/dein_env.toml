@@ -87,13 +87,6 @@ hook_source = "call Source('rc/plugins/vimtex.rc.vim')"
 repo = 'junegunn/vim-emoji'
 #}}}
 
-# Doxygen {{{
-[[plugins]]
-# Simplify Doxygen documentation in C, C++, Python. http://www.vim.org/scripts/script.php…
-repo = 'vim-scripts/DoxygenToolkit.vim'
-on_ft = ['c', 'cpp', 'Python']
-#}}}
-
 # Markdown {{{
 [[plugins]]
 # Markdown Vim Mode http://plasticboy.com/markdown-vim-mode/
