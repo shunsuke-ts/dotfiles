@@ -29,11 +29,11 @@ on_cmd = 'HelpfulVersion'
 repo = 'kana/vim-textobj-user'
 #}}}
 
-[[plugins]]
-# CMake functionality within Vim. https://jalcine.github.io/cmake.vim
-repo = 'jalcine/cmake.vim'
-if = "executable('cmake')"
-on_ft = ['cmake']
+# [[plugins]]
+# # CMake functionality within Vim. https://jalcine.github.io/cmake.vim
+# repo = 'jalcine/cmake.vim'
+# if = "executable('cmake')"
+# on_ft = ['cmake']
 
 # Git {{{
 [[plugins]]
