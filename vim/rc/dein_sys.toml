@@ -69,6 +69,5 @@ repo = 'tyru/open-browser.vim'
 [[plugins]]
 #Realtime preview by Vim. (Markdown, reStructuredText, textile)
 repo = 'kannokanno/previm'
-# on_ft = ['markdown', 'rst', 'mkd']
 depends = 'open-browser.vim'
 on_cmd = 'PrevimOpen'
