@@ -21,6 +21,7 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.vim,vimrc,gvimrc setlocal filetype=vim
   autocmd BufNewFile,BufRead *.y setlocal filetype=yacc
   autocmd BufNewFile,BufRead *.zsh,*.zshrc setlocal filetype=zsh
+  autocmd BufNewFile,BufRead zplug.zsh setlocal filetype=zplug
 
   autocmd BufNewFile,BufRead Dockerfile setlocal filetype=docker
 augroup END

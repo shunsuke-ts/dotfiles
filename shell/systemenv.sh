@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ripgrep=/opt/ripgrep-0.7.1
 caper=/opt/caper
 gonzui=/opt/gonzui-1.2

@@ -1,13 +1,13 @@
-#!/bin/bash
+#!/bin/sh
 
 DOT='Git/dotfiles/vim'
 
-if [ ! -e ~/.vim ]; then
+if [ ! -d ~/.vim ]; then
   mkdir -p ~/.vim/tmp
   chmod 700 ~/.vim/tmp
 fi
 
-if [ ! -e ~/.config/nvim ]; then
+if [ ! -d ~/.config/nvim ]; then
   mkdir -p ~/.config/nvim
 fi
 

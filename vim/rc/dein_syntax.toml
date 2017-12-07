@@ -125,8 +125,9 @@ repo = 'stephpy/vim-yaml'
 on_ft = ['yaml']
 #}}}
 
-# ZSH
+# ZSH {{{
 [[plugins]]
 # Vim filetype plugin for zplug 
 repo = 'zplug/vim-zplug'
-on_ft = ['zsh']
+on_ft = ['zplug']
+# }}}
