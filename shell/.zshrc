@@ -7,4 +7,5 @@ fi
 source ~/.zplug/init.zsh
 source ~/shell/zplug.zsh
 
+source ~/shell/alias.sh
 source ~/shell/systemenv.sh
