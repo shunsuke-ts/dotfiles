@@ -8,6 +8,8 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 
+zplug "mollifier/cd-gitroot"
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

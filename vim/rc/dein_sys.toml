@@ -60,7 +60,6 @@ hook_add = "call Source('rc/plugins/tagbar.rc.vim')"
 [[plugins]]
 # Ctags generator for Vim http://www.vim.org/scripts/script.php…
 repo = 'szw/vim-tags'
-if = "executable('ctags')"
 on_cmd = 'TagsGenerate'
 
 [[plugins]]
