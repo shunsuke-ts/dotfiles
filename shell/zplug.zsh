@@ -1,8 +1,8 @@
 #!/bin/zsh
 
-zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme
-POWERLEVEL9K_MODE='awesome-fontconfig'
-source ~/.fonts/*.sh
+#zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+#source ~/.fonts/*.sh
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"

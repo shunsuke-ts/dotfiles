@@ -2,11 +2,9 @@
 
 ripgrep=/opt/ripgrep-0.7.1
 caper=/opt/caper
-quex=/opt/quex/quex-0.67.5
 neo4j=/opt/neo4j-community-3.3.0
 marp=/opt/marp-0.0.11
 cayley=/opt/cayley_v0.6.1
-resilio=/opt/resilio-sync
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export PATH=$PATH:$JAVA_HOME/bin
