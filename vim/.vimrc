@@ -11,8 +11,8 @@ if has('vim_starting')
 
   if g:is_nvim
     let g:config_dir = expand('~/.config/nvim')
-    let g:python_host_prog = expand('/usr/bin/python2.7')
-    let g:python3_host_prog = expand('/usr/bin/python3.6')
+    let g:python_host_prog = expand('/usr/bin/python2')
+    let g:python3_host_prog = expand('/usr/bin/python3')
   endif
   if g:is_win
     set shellslash

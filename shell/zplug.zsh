@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+zplug "geometry-zsh/geometry"
+GEOMETRY_COLOR_GIT_DIRTY=9
+GEOMETRY_COLOR_GIT_BRANCH=6
+GEOMETRY_COLOR_EXIT_VALUE=9
+GEOMETRY_COLOR_DIR=242
+GEOMETRY_SYMBOL_EXIT_VALUE="▲"
+PROMPT_GEOMETRY_GIT_CONFLICTS=true
+
 #zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme
 #POWERLEVEL9K_MODE='awesome-fontconfig'
 #source ~/.fonts/*.sh
