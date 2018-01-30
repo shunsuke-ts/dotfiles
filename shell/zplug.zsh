@@ -1,16 +1,30 @@
 #!/bin/zsh
 
 zplug "geometry-zsh/geometry"
-GEOMETRY_COLOR_GIT_DIRTY=9
-GEOMETRY_COLOR_GIT_BRANCH=6
-GEOMETRY_COLOR_EXIT_VALUE=9
-GEOMETRY_COLOR_DIR=242
-GEOMETRY_SYMBOL_EXIT_VALUE="▲"
-PROMPT_GEOMETRY_GIT_CONFLICTS=true
+# ls colors
+ export CLICOLOR=1
+ export LSCOLORS="ExFxCxDxBxegedabagaca#d"
 
-#zplug "bhilburn/powerlevel9k", use:"powerlevel9k.zsh-theme", as:theme
-#POWERLEVEL9K_MODE='awesome-fontconfig'
-#source ~/.fonts/*.sh
+ # Enable prompt themes
+ setopt PROMPT_SUBST
+
+ autoload -U colors && colors
+ autoload -U promptinit
+ autoload -Uz compinit && compinit
+
+ # Use base16
+ #BASE16_SCHEME="tomorrow-night"
+ BASE16_SCHEME="default-dark"
+ BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-$BASE16_SCHEME.sh"
+ [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+
+ # Customize geometry
+ GEOMETRY_COLOR_GIT_DIRTY=9
+ GEOMETRY_COLOR_GIT_BRANCH=6
+ GEOMETRY_COLOR_EXIT_VALUE=9
+ GEOMETRY_COLOR_DIR=242
+ GEOMETRY_SYMBOL_EXIT_VALUE="▲"
+ PROMPT_GEOMETRY_GIT_CONFLICTS=true
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
