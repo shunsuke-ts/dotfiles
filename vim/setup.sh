@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT='Git/dotfiles/vim'
+DOT='.dotfiles/vim'
 
 if [ ! -d ~/.vim ]; then
   mkdir -p ~/.vim/tmp

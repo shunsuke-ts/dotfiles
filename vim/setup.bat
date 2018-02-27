@@ -1,4 +1,4 @@
-set DOT=%HOME%\Git\dotfiles\vim
+set DOT=%HOME%\.dotfiles\vim
 
 mkdir %HOME%\vimfiles
 

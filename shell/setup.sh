@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOT='Git/dotfiles/shell'
+DOT='.dotfiles/shell'
 
 if [ ! -d ~/shell ]; then
   mkdir -p ~/shell
