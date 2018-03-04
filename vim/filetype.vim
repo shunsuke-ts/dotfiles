@@ -12,6 +12,7 @@ augroup filetypedetect
   autocmd BufNewFile,BufRead *.java setlocal filetype=java
   autocmd BufNewFile,BufRead *.js setlocal filetype=javascript
   autocmd BufNewFile,BufRead *.l setlocal filetype=lex
+  autocmd BufNewFile,BufRead *.lemon setlocal filetype=lemon
   autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
   autocmd BufNewFile,BufRead *.pu setlocal filetype=plantuml
   autocmd BufNewFile,BufRead *.py setlocal filetype=python
