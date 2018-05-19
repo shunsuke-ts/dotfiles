@@ -26,3 +26,24 @@ repo = 'kana/vim-textobj-user'
 repo = 'bps/vim-textobj-python'
 on_ft = ['python']
 #}}}
+
+# Easy Mottion {{{
+[[plugins]]
+# Vim motions on speed! http://www.vim.org/scripts/script.php…
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+  call Source('rc/plugins/easymotion.rc.vim')
+'''
+
+[[plugins]]
+# 🔦 Improved incremental searching for Vim http://www.vim.org/scripts/script.php…
+repo = 'haya14busa/incsearch.vim'
+source_add = '''
+  call Source('rc/plugins/incsearch.rc.vim')
+'''
+
+[[plugins]]
+repo = 'haya14busa/incsearch-easymotion.vim'
+depends = ['incsearch.vim', 'vim-easymotion']
+on_source = ['incsearch.vim']
+#}}}

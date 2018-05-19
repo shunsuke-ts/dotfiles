@@ -54,7 +54,6 @@ hook_source = '''
 # deoplete.nvim source for Python
 repo = 'zchee/deoplete-jedi'
 if = "g:is_nvim"
-depends = 'deoplete.nvim'
 depends = ['deoplete.nvim']
 on_ft = ['python']
 

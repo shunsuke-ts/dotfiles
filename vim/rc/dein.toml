@@ -3,6 +3,11 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+# UI for Shougo's dein.vim
+repo = 'wsdjeg/dein-ui.vim'
+depends = ['dein.vim']
+
+[[plugins]]
 repo = 'Shougo/vimproc.vim'
 on_if = "!g:is_nvim"
 build = 'make'
