@@ -1,0 +1,40 @@
+
+# C/C++ {{{
+[[plugins]]
+# Additional Vim syntax highlighting for C++ (including C++11/14)
+repo = 'octol/vim-cpp-enhanced-highlight'
+on_ft = ['c', 'cpp']
+hook_source = '''
+  let g:cpp_class_scope_highlight = 1     " class scope
+  let g:cpp_member_variable_highlight = 1 " member variables
+  let g:cpp_class_decl_highlight = 1      " class names in declarations
+  let g:cpp_concepts_highlight = 1        " library concepts
+  let g:cpp_no_function_highlight = 0     " user defined functions
+
+  " hightlight template functions(Either)
+  " Note: C++ template syntax is notoriously difficult to parse, so don't expect this feature to be perfect.
+  let g:cpp_experimental_simple_template_highlight = 0 " which works in most cases, but can be a little slow on large files
+  let g:cpp_experimental_template_highlight = 1 " which is a faster / but has some corner cases where it doesn't work.
+'''
+# }}}
+
+# Docker {{{
+[[plugins]]
+# Vim syntax file & snippets for Docker's Dockerfile
+repo = 'ekalinin/Dockerfile.vim'
+on_ft = ['docker']
+# }}}
+
+# LEMON {{{
+[[plugins]]
+# Crappy syntax highlighting for Lemon Parser Generator grammars.
+repo = 'dccmx/vim-lemon-syntax'
+on_ft = ['lemon']
+# }}}
+
+# TOML {{{
+[[plugins]]
+# Vim syntax for TOML
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+# }}}
