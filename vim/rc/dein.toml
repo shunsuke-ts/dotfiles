@@ -8,15 +8,5 @@ repo = 'wsdjeg/dein-ui.vim'
 depends = ['dein.vim']
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-on_if = "!g:is_nvim"
-build = 'make'
-hook_add = '''
-  if g:is_win
-    let g:vimproc#download_windows_dll = 1
-  endif
-'''
-
-[[plugins]]
 # The standard snippets repository for neosnippet
 repo = 'Shougo/neosnippet-snippets'
