@@ -29,19 +29,6 @@ on_cmd = 'HelpfulVersion'
 repo = 'kana/vim-textobj-user'
 #}}}
 
-# [[plugins]]
-# # CMake functionality within Vim. https://jalcine.github.io/cmake.vim
-# repo = 'jalcine/cmake.vim'
-# if = "executable('cmake')"
-# on_ft = ['cmake']
-
-# Git {{{
-[[plugins]]
-# Asynchronously control git repositories in Neovim/Vim 8 http://www.vim.org/scripts/script.php…
-repo = 'lambdalisue/gina.vim'
-on_cmd = 'Gina'
-if = "g:is_nvim || g:is_vim8"
-
 [[plugins]]
 # A git wrapper focus on simplity and usability
 repo = 'chemzqm/vim-easygit'

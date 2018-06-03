@@ -39,10 +39,10 @@ endfunction
 " Completion
 set completeopt=menuone
 
-call Source('rc/basic.rc.vim')
-call Source('rc/indent.rc.vim')
-call Source('rc/mappings.rc.vim')
-call Source('rc/encoding.rc.vim')
-call Source('rc/dein.rc.vim')
+call Source('rc/vim_basic.rc.vim')
+call Source('rc/vim_indent.rc.vim')
+call Source('rc/vim_mappings.rc.vim')
+call Source('rc/vim_encoding.rc.vim')
+call Source('rc/vim_dein.rc.vim')
 
 filetype plugin indent on
