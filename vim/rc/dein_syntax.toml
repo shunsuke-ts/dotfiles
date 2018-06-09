@@ -38,3 +38,10 @@ on_ft = ['lemon']
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 # }}}
+
+# Vim {{{
+[[plugins]]
+# An excellent Vim's syntax highlighting file for Vim script
+repo = 'vim-jp/syntax-vim-ex'
+on_ft = ['vim']
+#}}}

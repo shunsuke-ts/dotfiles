@@ -1,0 +1,22 @@
+# Go {{{
+[[plugins]]
+# Go development plugin for Vim https://patreon.com/fatih
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_source = "call Source('rc/plugins/vim-go.rc.vim')"
+#}}}
+
+# Python {{{
+[[plugins]]
+# Text objects for Python.
+repo = 'bps/vim-textobj-python'
+on_ft = ['python']
+[[plugins]]
+# A nicer Python indentation style for vim.
+repo = 'hynek/vim-python-pep8-indent'
+on_ft = ['python']
+[[plugins]]
+# Flake8 plugin for Vim
+repo = 'nvie/vim-flake8'
+on_ft = ['python']
+#}}}

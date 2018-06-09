@@ -1,0 +1,8 @@
+[[plugins]]
+# lean & mean status/tabline for vim that's light as air
+repo = 'vim-airline/vim-airline'
+hook_add = "call Source('rc/plugins/vim-airline.rc.vim')"
+[[plugins]]
+# A collection of themes for vim-airline
+repo = 'vim-airline/vim-airline-themes'
+on_source = ['vim-airline']

@@ -1,0 +1,5 @@
+[[plugins]]
+# Lightweight filer for Vim
+repo = 'cocopon/vaffle.vim'
+on_cmd = 'Vaffle'
+hook_add = "call Source('rc/plugins/vaffle.rc.vim')"

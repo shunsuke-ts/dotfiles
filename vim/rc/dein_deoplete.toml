@@ -1,0 +1,35 @@
+[[plugins]]
+# 🌠 Dark powered asynchronous completion framework for neovim
+repo = 'Shougo/deoplete.nvim'
+depends = ['context_filetype.vim']
+on_event = 'InsertCharPre'
+hook_source = '''
+  let g:deoplete#enable_at_startup = 1
+  call Source('rc/plugins/deoplete.nvim.rc.vim')
+'''
+
+[[plugins]]
+# Syntax source for neocomplete/deoplete/ncm
+repo = 'Shougo/neco-syntax'
+
+[[plugins]]
+# deoplete.nvim source for Go. Asynchronous Go completion for Neovim.
+repo = 'zchee/deoplete-go'
+depends = ['deoplete.nvim']
+on_event = 'InsertEnter'
+on_ft = ['go']
+
+[[plugins]]
+# deoplete.nvim source for Python
+repo = 'zchee/deoplete-jedi'
+depends = ['deoplete.nvim']
+on_ft = ['python']
+
+[[plugins]]
+# The vim source for neocomplete/deoplete
+repo='Shougo/neco-vim'
+on_ft = ['vim']
+
+[[plugins]]
+repo = 'Shougo/neoinclude.vim'
+

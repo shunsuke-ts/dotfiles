@@ -20,15 +20,24 @@ if !dein#load_state(s:dein_path)
   finish
 endif
 
+function! s:load_toml(toml_file, args) abort
+  let s_path = resolve(expand(s:rc_dir . a:toml_file . '.toml'))
+  if filereadable(s_path)
+    call dein#load_toml(s_path, a:args)
+  endif
+endfunction
+
 call dein#begin(s:dein_path)
-  call dein#load_toml(s:rc_dir . 'dein.toml',        {'lazy': 0})
-  " call dein#load_toml(s:rc_dir . 'dein_lazy.toml',   {'lazy': 1})
-  call dein#load_toml(s:rc_dir . 'dein_syntax.toml', {'lazy': 0})
-  call dein#load_toml(s:rc_dir . 'dein_visual.toml', {'lazy': 0})
-  " call dein#load_toml(s:rc_dir . 'dein_edit.toml',   {'lazy': 0})
-  " call dein#load_toml(s:rc_dir . 'dein_sys.toml',    {'lazy': 1})
-  " call dein#load_toml(s:rc_dir . 'dein_neo.toml',    {'lazy': 1})
-  " call dein#load_toml(s:rc_dir . 'dein_env.toml',    {'lazy': 1})
+  call s:load_toml('dein',             {'lazy': 0})
+  call s:load_toml('dein_lazy',        {'lazy': 1})
+  call s:load_toml('dein_syntax',      {'lazy': 0})
+  call s:load_toml('dein_display',     {'lazy': 0})
+  call s:load_toml('dein_interface',   {'lazy': 0})
+  call s:load_toml('dein_integration', {'lazy': 1})
+  call s:load_toml('dein_language',    {'lazy': 1})
+  call s:load_toml('dein_lsp',         {'lazy': 1, 'if': g:use_lsp})
+  call s:load_toml('dein_deoplete',    {'lazy': 1, 'if': g:use_deoplete})
+  call s:load_toml('dein_denite',      {'lazy': 1})
 call dein#end()
 call dein#save_state()
 

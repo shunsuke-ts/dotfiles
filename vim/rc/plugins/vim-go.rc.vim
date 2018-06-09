@@ -25,9 +25,7 @@ let g:go_def_mapping_enabled = 1
 let g:go_disable_autoinstall = 1
 let g:go_dispatch_enabled = 1
 
-" 新規ファイルでテンプレートを適応しない
 let go_template_autocreate = 0
-" vimprocではなくjobを使う
 let g:go#use_vimproc = 0
 
 

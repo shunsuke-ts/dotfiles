@@ -19,8 +19,8 @@ if has('vim_starting')
     let g:config_dir = expand('~/vimfiles')
     if g:is_nvim
       let g:config_dir = expand('~/AppData/Local/nvim')
-      let g:python_host_prog = expand('C:/App/Python27/python.exe')
-      let g:python3_host_prog = expand('C:/App/Python35/python.exe')
+      let g:python_host_prog = expand('')
+      let g:python3_host_prog = expand('C:/Program Files\Python36/python.exe')
     endif
   endif
 
@@ -38,6 +38,9 @@ endfunction
 
 " Completion
 set completeopt=menuone
+
+let g:use_deoplete = 0
+let g:use_lsp = 1
 
 call Source('rc/vim_basic.rc.vim')
 call Source('rc/vim_indent.rc.vim')
