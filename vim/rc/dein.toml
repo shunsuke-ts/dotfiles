@@ -1,13 +1,10 @@
 [[plugins]]
-# ⚡️ Dark powered Vim/Neovim plugin manager
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-# UI for Shougo's dein.vim
 repo = 'wsdjeg/dein-ui.vim'
 depends = ['dein.vim']
 
 [[plugins]]
-# Vim plugin: Create your own text objects http://www.vim.org/scripts/script.php…
 repo = 'kana/vim-textobj-user'
 

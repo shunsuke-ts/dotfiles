@@ -39,9 +39,9 @@ endfunction
 " Completion
 set completeopt=menuone
 
-let g:use_deoplete = 1
-let g:use_denite = 1
-let g:use_lsp = 0
+let g:use_deoplete = 0 && g:is_nvim
+let g:use_denite   = 0 && g:is_nvim
+let g:use_lsp      = 0
 
 call Source('rc/vim_basic.rc.vim')
 call Source('rc/vim_indent.rc.vim')
