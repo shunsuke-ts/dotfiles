@@ -1,7 +1,6 @@
 
 # C/C++ {{{
 [[plugins]]
-# Additional Vim syntax highlighting for C++ (including C++11/14)
 repo = 'octol/vim-cpp-enhanced-highlight'
 on_ft = ['c', 'cpp']
 hook_source = '''
@@ -20,28 +19,24 @@ hook_source = '''
 
 # Docker {{{
 [[plugins]]
-# Vim syntax file & snippets for Docker's Dockerfile
 repo = 'ekalinin/Dockerfile.vim'
 on_ft = ['docker']
 # }}}
 
 # LEMON {{{
 [[plugins]]
-# Crappy syntax highlighting for Lemon Parser Generator grammars.
 repo = 'dccmx/vim-lemon-syntax'
 on_ft = ['lemon']
 # }}}
 
 # TOML {{{
 [[plugins]]
-# Vim syntax for TOML
 repo = 'cespare/vim-toml'
 on_ft = ['toml']
 # }}}
 
 # Vim {{{
 [[plugins]]
-# An excellent Vim's syntax highlighting file for Vim script
 repo = 'vim-jp/syntax-vim-ex'
 on_ft = ['vim']
 #}}}

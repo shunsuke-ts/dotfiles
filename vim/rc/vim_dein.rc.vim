@@ -37,7 +37,7 @@ call dein#begin(s:dein_path)
   call s:load_toml('dein_language',    {'lazy': 1})
   call s:load_toml('dein_lsp',         {'lazy': 1, 'if': g:use_lsp})
   call s:load_toml('dein_deoplete',    {'lazy': 1, 'if': g:use_deoplete})
-  call s:load_toml('dein_denite',      {'lazy': 1})
+  call s:load_toml('dein_denite',      {'lazy': 1, 'if': g:use_denite})
 call dein#end()
 call dein#save_state()
 

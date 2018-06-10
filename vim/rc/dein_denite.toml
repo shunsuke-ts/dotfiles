@@ -1,5 +1,4 @@
 [[plugins]]
-# 🐉 Dark powered asynchronous unite all interfaces for Neovim/Vim8
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 hook_source = "call Source('rc/plugins/denite.nvim.rc.vim')"
@@ -40,11 +39,9 @@ hook_add = '''
 '''
 
 [[plugins]]
-# MRU plugin includes unite.vim/denite.nvim MRU sources
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
-# Saves yank history includes unite.vim history/yank source.
 repo = 'Shougo/neoyank.vim'
 on_event = 'TextYankPost'
 on_source = ['denite.nvim']
