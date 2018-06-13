@@ -11,8 +11,8 @@ if has('vim_starting')
 
   if g:is_nvim
     let g:config_dir = expand('~/.config/nvim')
-    let g:python_host_prog = expand('/usr/bin/python2')
-    let g:python3_host_prog = expand('/usr/bin/python3')
+    let g:python_host_prog = exepath('python')
+    let g:python3_host_prog = exepath('python3')
   endif
   if g:is_win
     set shellslash
@@ -20,7 +20,7 @@ if has('vim_starting')
     if g:is_nvim
       let g:config_dir = expand('~/AppData/Local/nvim')
       let g:python_host_prog = expand('')
-      let g:python3_host_prog = expand('C:/Program Files\Python36/python.exe')
+      let g:python3_host_prog = exepath('python')
     endif
   endif
 
@@ -41,7 +41,7 @@ set completeopt=menuone
 
 let g:use_deoplete = 0 && g:is_nvim
 let g:use_denite   = 0 && g:is_nvim
-let g:use_lsp      = 0
+let g:use_lsp      = 1
 
 call Source('rc/vim_basic.rc.vim')
 call Source('rc/vim_indent.rc.vim')
