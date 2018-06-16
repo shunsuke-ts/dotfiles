@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]]
 repo = 'lambdalisue/gina.vim'
 on_cmd = 'Gina'
 
