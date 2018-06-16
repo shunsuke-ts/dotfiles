@@ -1,6 +1,0 @@
-[[plugins]]
-repo = 'roxma/nvim-yarp'
-if = 'g:has_python3'
-[[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
-if = 'g:has_python3'

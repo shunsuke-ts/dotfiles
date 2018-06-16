@@ -35,7 +35,6 @@ call dein#begin(s:dein_path)
   call s:load_toml('dein_interface',   {'lazy': 0})
   call s:load_toml('dein_integration', {'lazy': 1})
   call s:load_toml('dein_language',    {'lazy': 1})
-  call s:load_toml('dein_vim',         {'lazy': 0, 'if': 0}) " error! can't boot
   call s:load_toml('dein_lsp',         {'lazy': 1, 'if': g:use_lsp})
   call s:load_toml('dein_deoplete',    {'lazy': 1, 'if': g:use_deoplete})
   call s:load_toml('dein_denite',      {'lazy': 1, 'if': g:use_denite})

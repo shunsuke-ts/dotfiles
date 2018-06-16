@@ -7,6 +7,14 @@ del      %HOME%\.gvimrc
 del      %HOME%\vimfiles\filetype.vim
 rd /S /Q %HOME%\vimfiles\ftplugin
 rd /S /Q %HOME%\vimfiles\rc
+rd /S /Q %HOME%\vimfiles\syntax
+del      %HOME%\AppData\Local\nvim\init.vim
+del      %HOME%\AppData\Local\nvim\.vimrc
+del      %HOME%\AppData\Local\nvim\filetype.vim
+rd /S /Q %HOME%\AppData\Local\nvim\ftplugin
+rd /S /Q %HOME%\AppData\Local\nvim\rc
+rd /S /Q %HOME%\AppData\Local\nvim\syntax
+rd /S /Q %HOME%\AppData\Local\nvim\tmp
 
 REM Vim
 mklink    %HOME%\.vimrc                          %DOT%\.vimrc

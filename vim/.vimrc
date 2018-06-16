@@ -40,7 +40,7 @@ endfunction
 set completeopt=menuone
 
 let g:use_deoplete = 0 && g:is_nvim
-let g:use_denite   = 0 && g:is_nvim
+let g:use_denite   = 1 "&& g:is_nvim
 let g:use_lsp      = 1
 
 call Source('rc/vim_basic.rc.vim')
