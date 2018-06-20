@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 depends = ['async.vim']
-hook_source = "call Source('rc/plugins/vim-lsp.rc.vim')"
+hook_add = "call Source('rc/plugins/vim-lsp.rc.vim')"
 
 [[plugins]]
 repo = 'prabirshrestha/async.vim'

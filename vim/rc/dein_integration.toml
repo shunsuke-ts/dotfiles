@@ -1,5 +1,9 @@
 [[plugins]]
 repo = 'junegunn/fzf.vim'
+hook_add = '''
+  set rtp+=~/.fzf
+  let g:fzf_layout = { 'down': '~40%' }
+'''
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'

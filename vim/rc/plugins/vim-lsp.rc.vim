@@ -1,7 +1,3 @@
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-
 if executable('go-langserver')
   au User lsp_setup call lsp#register_server({
         \ 'name': 'go-langserver',
@@ -17,3 +13,6 @@ if executable('pyls')
         \ 'whitelist': ['python'],
         \ })
 endif
+
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1

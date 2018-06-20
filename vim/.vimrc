@@ -3,8 +3,8 @@ if has('vim_starting')
   let g:is_win = has('win32') || has('win64')
   let g:is_mac = has('mac')
   let g:is_unix = has('unix')
-  let g:is_vim8 = has('nvim') && v:version >= 800
   let g:is_nvim = has('nvim')
+  let g:is_vim8 = v:version >= 800
 
 
   let $CACHE = expand('~/.cache')
@@ -17,10 +17,10 @@ if has('vim_starting')
   if g:is_win
     set shellslash
     let g:config_dir = expand('~/vimfiles')
+    let g:python_host_prog = expand('')
+    let g:python3_host_prog = exepath('python')
     if g:is_nvim
       let g:config_dir = expand('~/AppData/Local/nvim')
-      let g:python_host_prog = expand('')
-      let g:python3_host_prog = exepath('python')
     endif
   endif
 
@@ -39,9 +39,9 @@ endfunction
 " Completion
 set completeopt=menuone
 
-let g:use_deoplete = 0 && g:is_nvim
-let g:use_denite   = 1 "&& g:is_nvim
-let g:use_lsp      = 1
+let g:use_deoplete = 1
+let g:use_denite   = 1
+let g:use_lsp      = 0
 
 call Source('rc/vim_basic.rc.vim')
 call Source('rc/vim_indent.rc.vim')
