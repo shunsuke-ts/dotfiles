@@ -28,10 +28,12 @@ hook_add = '''
 repo = 'tyru/caw.vim'
 on_map = {nx = '<Plug>'}
 hook_add = '''
-  nmap <Leader>c <Plug>(caw:hatpos:toggle)
-  vmap <Leader>c <Plug>(caw:hatpos:toggle)
-  nmap <Leader>, <Plug>(caw:zeropos:toggle)
-  vmap <Leader>, <Plug>(caw:zeropos:toggle)
+  " comment toggle(^)
+  nmap c; <Plug>(caw:hatpos:toggle)
+  vmap c; <Plug>(caw:hatpos:toggle)
+  " comment toggle(0)
+  nmap c: <Plug>(caw:zeropos:toggle)
+  vmap c: <Plug>(caw:zeropos:toggle)
 '''
 
 [[plugins]]
