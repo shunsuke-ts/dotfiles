@@ -8,3 +8,5 @@ depends = ['dein.vim']
 [[plugins]]
 repo = 'kana/vim-textobj-user'
 
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'

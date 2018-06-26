@@ -16,3 +16,8 @@ on_ft = ['python']
 repo = 'nvie/vim-flake8'
 on_ft = ['python']
 #}}}
+
+# Markdown {{{
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+#}}}
