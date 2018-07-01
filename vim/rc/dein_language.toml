@@ -11,9 +11,11 @@ repo = 'bps/vim-textobj-python'
 on_ft = ['python']
 [[plugins]]
 repo = 'hynek/vim-python-pep8-indent'
+if = 0
 on_ft = ['python']
 [[plugins]]
 repo = 'nvie/vim-flake8'
+if = 0
 on_ft = ['python']
 #}}}
 
