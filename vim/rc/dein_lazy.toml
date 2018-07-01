@@ -59,13 +59,16 @@ depends = 'open-browser.vim'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
+on_event = 'VimEnter'
+hook_add = '''
+  call Source('rc/plugins/easymotion.rc.vim')
+'''
 
-[[plugins]]
-repo = 'haya14busa/incsearch.vim'
-
-[[plugins]]
-repo = 'haya14busa/incsearch-easymotion.vim'
-depends = ['vim-easymotion', 'incsearch.vim']
+# [[plugins]]
+# repo = 'haya14busa/incsearch.vim'
+# [[plugins]]
+# repo = 'haya14busa/incsearch-easymotion.vim'
+# depends = ['vim-easymotion', 'incsearch.vim']
 
 [[plugins]]
 repo = 'Shougo/echodoc.vim'

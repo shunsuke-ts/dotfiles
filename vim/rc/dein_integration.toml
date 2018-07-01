@@ -32,8 +32,6 @@ depends = ['lightline.vim', 'ale']
 # repo = 'vim-airline/vim-airline-themes'
 # on_source = ['vim-airline']
 
-
-
 [[plugins]]
 repo = 'majutsushi/tagbar'
 hook_add = '''
