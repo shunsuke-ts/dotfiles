@@ -1,0 +1,38 @@
+[[plugins]]
+repo = 'tomasr/molokai'
+hook_add = '''
+  let g:molokai_original = 1
+  let g:rehash256 = 1
+'''
+[[plugins]]
+repo = 'sjl/badwolf'
+hook_add = '''
+  let g:badwolf_darkgutter = 1
+  let g:badwolf_tabline = 1
+  let g:badwolf_html_link_underline = 1
+  let g:badwolf_css_props_highlight = 1
+'''
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+hook_add = '''
+  let g:onedark_termcolors = 256
+  let g:onedark_terminal_italics = 1
+'''
+[[plugins]]
+repo = 'roosta/vim-srcery'
+hook_add = '''
+  let g:srcery_bold = 1
+  "let g:srcery_italic = 1
+  let g:srcery_underline = 1
+  let g:srcery_undercurl = 1
+  let g:srcery_inverse = 1
+'''
+
+[[plugins]]
+repo = 'lsdr/monokai'
+[[plugins]]
+repo = 'morhetz/gruvbox'
+[[plugins]]
+repo = 'beigebrucewayne/Turtles'
+[[plugins]]
+repo = 'cocopon/iceberg.vim'

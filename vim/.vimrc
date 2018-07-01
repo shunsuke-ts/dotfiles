@@ -3,30 +3,28 @@ if has('vim_starting')
   let g:is_win = has('win32') || has('win64')
   let g:is_mac = has('mac')
   let g:is_unix = has('unix')
-  let g:is_vim8 = has('nvim') && v:version >= 800
   let g:is_nvim = has('nvim')
-
+  let g:is_vim8 = v:version >= 800
+  let g:has_lua = has('lua')
+  let g:has_python = has('python')
+  let g:has_python3 = has('python3')
 
   let $CACHE = expand('~/.cache')
 
   if g:is_nvim
     let g:config_dir = expand('~/.config/nvim')
-    let g:python_host_prog = expand('/usr/bin/python2')
-    let g:python3_host_prog = expand('/usr/bin/python3')
+    let g:python_host_prog = exepath('python')
+    let g:python3_host_prog = exepath('python3')
   endif
   if g:is_win
     set shellslash
     let g:config_dir = expand('~/vimfiles')
+    let g:python_host_prog = expand('')
+    let g:python3_host_prog = exepath('python')
     if g:is_nvim
       let g:config_dir = expand('~/AppData/Local/nvim')
-      let g:python_host_prog = expand('C:/App/Python27/python.exe')
-      let g:python3_host_prog = expand('C:/App/Python35/python.exe')
     endif
   endif
-
-  let g:has_lua = has('lua')
-  let g:has_python = has('python')
-  let g:has_python3 = has('python3')
 endif
 
 function! Source(path) abort
@@ -36,13 +34,13 @@ function! Source(path) abort
   endif
 endfunction
 
-" Completion
-set completeopt=menuone
+let g:use_deoplete = 1
+let g:use_denite   = 1
+let g:use_ale      = 1
+let g:use_lsp      = 0
 
-call Source('rc/basic.rc.vim')
-call Source('rc/indent.rc.vim')
-call Source('rc/mappings.rc.vim')
-call Source('rc/encoding.rc.vim')
-call Source('rc/dein.rc.vim')
+call Source('rc/vim_basic.rc.vim')
+call Source('rc/vim_mapping.rc.vim')
+call Source('rc/vim_dein.rc.vim')
 
 filetype plugin indent on

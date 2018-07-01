@@ -1,4 +1,4 @@
-let mapleader = "<Space>"
+let mapleader = "\<Space>"
 
 nnoremap ZQ <Nop>
 nnoremap ZZ <Nop>

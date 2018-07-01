@@ -1,0 +1,13 @@
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+depends = ['async.vim']
+hook_add = "call Source('rc/plugins/vim-lsp.rc.vim')"
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
