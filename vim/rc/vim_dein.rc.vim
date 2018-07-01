@@ -29,11 +29,9 @@ endfunction
 
 call dein#begin(s:dein_path)
   call s:load_toml('dein',             {'lazy': 0})
-  call s:load_toml('dein_lazy',        {'lazy': 1})
+  call s:load_toml('dein_color',       {'lazy': 0})
   call s:load_toml('dein_syntax',      {'lazy': 0})
-  call s:load_toml('dein_display',     {'lazy': 0})
-  call s:load_toml('dein_interface',   {'lazy': 0})
-  call s:load_toml('dein_integration', {'lazy': 1})
+  call s:load_toml('dein_lazy',        {'lazy': 1})
   call s:load_toml('dein_language',    {'lazy': 1})
   call s:load_toml('dein_vim',         {'lazy': 0, 'if': g:is_vim8})
   call s:load_toml('dein_lsp',         {'lazy': 0, 'if': g:use_lsp})

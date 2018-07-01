@@ -17,6 +17,12 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
+" Jump to first match with enter or space
+let g:EasyMotion_enter_jump_first = 1
+let g:EasyMotion_space_jump_first = 1
+
+let g:EasyMotion_keys = 'asdghklqwertyuiopzxcvbnmfj;'
+
 " " You can use other keymappings like <C-l> instead of <CR> if you want to
 " " use these mappings as default search and somtimes want to move cursor with
 " " EasyMotion.

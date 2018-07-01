@@ -1,3 +1,20 @@
+" encoding
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
+set fileformats=unix,dos,mac
+
+" default indent
+set autoindent
+set smartindent
+set smarttab
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" completion
+set completeopt=menuone
+
 set mouse=
 set clipboard& clipboard+=unnamedplus,unnamed
 set visualbell t_vb=
@@ -50,6 +67,7 @@ set confirm
 set autoread
 set backup
 
+" backup
 let $BACKUP = expand(g:config_dir . '/tmp')
 "set writebackup
 set swapfile

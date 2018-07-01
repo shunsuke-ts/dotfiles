@@ -1,4 +1,3 @@
-# color scheme {{{
 [[plugins]]
 repo = 'tomasr/molokai'
 hook_add = '''
@@ -37,4 +36,3 @@ repo = 'morhetz/gruvbox'
 repo = 'beigebrucewayne/Turtles'
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
-# }}}

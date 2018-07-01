@@ -29,11 +29,11 @@ repo = 'tyru/caw.vim'
 on_map = {nx = '<Plug>'}
 hook_add = '''
   " comment toggle(^)
-  nmap c; <Plug>(caw:hatpos:toggle)
-  vmap c; <Plug>(caw:hatpos:toggle)
+  nmap <Leader>c; <Plug>(caw:hatpos:toggle)
+  vmap <Leader>c; <Plug>(caw:hatpos:toggle)
   " comment toggle(0)
-  nmap c: <Plug>(caw:zeropos:toggle)
-  vmap c: <Plug>(caw:zeropos:toggle)
+  nmap <Leader>c: <Plug>(caw:zeropos:toggle)
+  vmap <Leader>c: <Plug>(caw:zeropos:toggle)
 '''
 
 [[plugins]]
@@ -59,7 +59,7 @@ depends = 'open-browser.vim'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-on_event = 'VimEnter'
+on_event = 'BufReadPre'
 hook_add = '''
   call Source('rc/plugins/easymotion.rc.vim')
 '''
@@ -76,4 +76,46 @@ on_event = 'CompleteDone'
 hook_source = '''
   " let g:echodoc#type = 'signature'
   call echodoc#enable()
+'''
+
+# [[plugins]]
+# repo = 'junegunn/fzf.vim'
+# hook_add = '''
+#   set rtp+=~/.fzf
+#   let g:fzf_layout = { 'down': '~40%' }
+# '''
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+on_cmd = 'Gina'
+
+[[plugins]]
+repo = 'cocopon/vaffle.vim'
+on_cmd = 'Vaffle'
+hook_add = "call Source('rc/plugins/vaffle.rc.vim')"
+
+[[plugins]]
+repo = 'w0rp/ale'
+if = 'g:use_ale'
+on_event = 'BufReadPre'
+hook_add = "call Source('rc/plugins/ale.rc.vim')"
+[[plugins]]
+repo = 'maximbaz/lightline-ale'
+if = 'g:use_ale'
+depends = ['lightline.vim', 'ale']
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# [[plugins]]
+# repo = 'vim-airline/vim-airline'
+# hook_add = "call Source('rc/plugins/vim-airline.rc.vim')"
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
+# on_source = ['vim-airline']
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+hook_add = '''
+  nmap <F8> :TagbarToggle<CR>
 '''

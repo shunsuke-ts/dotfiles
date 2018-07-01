@@ -5,7 +5,9 @@ if has('vim_starting')
   let g:is_unix = has('unix')
   let g:is_nvim = has('nvim')
   let g:is_vim8 = v:version >= 800
-
+  let g:has_lua = has('lua')
+  let g:has_python = has('python')
+  let g:has_python3 = has('python3')
 
   let $CACHE = expand('~/.cache')
 
@@ -23,10 +25,6 @@ if has('vim_starting')
       let g:config_dir = expand('~/AppData/Local/nvim')
     endif
   endif
-
-  let g:has_lua = has('lua')
-  let g:has_python = has('python')
-  let g:has_python3 = has('python3')
 endif
 
 function! Source(path) abort
@@ -36,17 +34,13 @@ function! Source(path) abort
   endif
 endfunction
 
-" Completion
-set completeopt=menuone
-
 let g:use_deoplete = 1
 let g:use_denite   = 1
+let g:use_ale      = 1
 let g:use_lsp      = 0
 
 call Source('rc/vim_basic.rc.vim')
-call Source('rc/vim_indent.rc.vim')
-call Source('rc/vim_mappings.rc.vim')
-call Source('rc/vim_encoding.rc.vim')
+call Source('rc/vim_mapping.rc.vim')
 call Source('rc/vim_dein.rc.vim')
 
 filetype plugin indent on

@@ -1,2 +1,0 @@
-go get -u github.com/sourcegraph/go-langserver
-pip3 install python-language-server
