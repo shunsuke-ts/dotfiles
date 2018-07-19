@@ -18,6 +18,28 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 't9md/vim-quickhl'
+on_map = {n = '<Plug>'}
+hook_add = '''
+  nmap <Leader>m <Plug>(quickhl-manual-this)
+  xmap <Leader>m <Plug>(quickhl-manual-this)
+
+  nmap <Leader>M <Plug>(quickhl-manual-reset)
+  xmap <Leader>M <Plug>(quickhl-manual-reset)
+
+  " Full
+  " nmap <Space>w <Plug>(quickhl-manual-this-whole-word)
+  " xmap <Space>w <Plug>(quickhl-manual-this-whole-word)
+  "
+  " nmap <Space>c <Plug>(quickhl-manual-clear)
+  " vmap <Space>c <Plug>(quickhl-manual-clear)
+  "
+  " nmap <Space>j <Plug>(quickhl-cword-toggle)
+  " nmap <Space>] <Plug>(quickhl-tag-toggle)
+  " map H <Plug>(operator-quickhl-manual-this-motion)
+'''
+
+[[plugins]]
 repo = 'vim-scripts/taglist.vim'
 if = "executable('ctags')"
 hook_add = '''

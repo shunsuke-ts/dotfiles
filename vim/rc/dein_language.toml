@@ -1,25 +1,25 @@
-# Go {{{
+[[plugins]]
+repo = 'vim-scripts/DoxygenToolkit.vim'
+on_ft = ['c', 'cpp', 'python']
+hook_add = '''
+  "let g:DoxygenToolkit _commentType = ""
+'''
+
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
-hook_source = "call Source('rc/plugins/vim-go.rc.vim')"
-#}}}
+hook_add = "call Source('rc/plugins/vim-go.rc.vim')"
 
-# Python {{{
 [[plugins]]
 repo = 'bps/vim-textobj-python'
 on_ft = ['python']
 [[plugins]]
 repo = 'hynek/vim-python-pep8-indent'
-if = 0
 on_ft = ['python']
 [[plugins]]
 repo = 'nvie/vim-flake8'
-if = 0
 on_ft = ['python']
-#}}}
 
-# Markdown {{{
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
-#}}}
+on_ft = ['markdown']
